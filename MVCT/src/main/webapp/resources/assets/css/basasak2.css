@@ -1,0 +1,120 @@
+@charset "UTF-8";
+
+
+.sect_title .top_title {
+	display: block;
+	font-size:16px;
+	color:#ec1d25;
+	line-height:1.2;
+}
+body .type03 {
+	background:#ffec48 !important;
+	}
+.main_incont .sect_title {
+	padding: 58px 0 56px;
+}
+.sect_title {
+	text-align: center;
+}
+
+.main_cont, .main_incont {
+	padding:0 0 80px;
+}
+.sect_title .vis_title{
+	display:block;
+	margin-top:10px;
+	font-size:44px;
+	font-weight:400 !important;
+	color:#222;
+	line_height:1.2;
+}
+.sect_title .sub_title {
+	margin-top: 20px;
+	font-size:20px;
+	line-height:26px;
+	color:#222;
+}
+.main_slider{
+	overflow:visible;
+	width:100%;
+	max-width:1170px;
+	margin:0 auto;
+}
+
+.slick-slider {
+	position: relative;
+	display:block;
+	box-sizing:border-box;
+	user-select: none;
+	touch-action: pan-y;
+	-webkit-tap-highlight-color:transparent;
+}
+
+.main_slider .slick-list{
+	overflow:visible;
+}
+.slick-slider .slick-track, .slick-slider .slick-list {
+	transform: translate3d(0,0,0);
+}
+.slick-list{
+	position:relative;
+	displat: block;
+	margin:0;
+
+}
+.main_slidevar {
+	position:relative;
+	width:690px;
+	margin:84px auto 0;
+}
+.main_slider .slide_box .cardbox{
+	position:relative;
+}
+.main_slider .slide_box .cardbox{
+	margin:0 10px;
+	box-shadow: 0px 10px 20px 0px raba(38, 31, 31, 0.2)
+}
+.main_slider .slode_box .cardbox .card_des {
+	min-height: 32px 20px 32px 28px;
+	background: #fff;
+}
+.main_slider .slide_box .cardbox .card_des .card_name{
+	color:#222;
+	font-size:18px;
+}
+strong, b, th {
+	font-weight: bold;
+}
+i, em, u, cite{
+	font-style: normal;
+}
+.main_slider .slide_box {
+	opacity:0.75;
+	transition:0.8s;
+}
+.slick-initialized .slick-slide{
+	display:block;
+	
+}
+.slick-slide {
+	display: none;
+	float: left;
+	height: 100%;
+	min-height: 1px;
+}
+.main_slider .slode_box .cardbox .card_img {
+	overflow: hidden;
+	display:block;
+	max-height:310px;
+	transition:0.8s;
+}
+.sect_title .sub_tit {
+	margin-top:20px;
+	font-size:20px;
+	line-height:26px;
+	color:#222;
+}
+
+
+
+
