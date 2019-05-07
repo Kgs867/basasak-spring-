@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="Cart">
+	<select id="CList" resultType="cartDTO" parameterType="string">
+		select * from shopb where m_id=#{id}
+	</select>
+	<select id="CMax" resultType="int" parameterType="string">
+		select max(sb_serial) from shopb where m_id=#{id}
+	</select>
+	
+	<!-- <insert id="CAdd">
+		insert into shopb()
+	</insert> -->
+	
+
+</mapper>
+
+	
+
+
+
+

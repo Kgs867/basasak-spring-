@@ -185,9 +185,9 @@
 								<c:forEach var="article" items="${articleList}">
 									<div class="product">
 										<div class="product-top">
-											<figure>
+											<figure><!-- &pageNum=${currentPage} -->
 												<a
-													href="/Project/cookieView.do?c_serial=${article.c_serial}&pageNum=${currentPage}"
+													href="cookieView.do?c_serial=${article.c_serial}"
 													title="Product Name"> <img src="${article.c_img1 }"
 													alt="Product image" class="product-image">
 												</a>

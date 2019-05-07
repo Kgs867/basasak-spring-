@@ -11,6 +11,8 @@ public class CookieDTO {
 	private String c_product;
 	
 	private String c_name;
+	private int c_type;
+	
 	
 	private int c_cal;
 	private int c_tan;
@@ -21,6 +23,13 @@ public class CookieDTO {
 	private int c_tgi;
 	private int c_col;
 	private int c_na;
+	
+	public int getC_type() {
+		return c_type;
+	}
+	public void setC_type(int c_type) {
+		this.c_type = c_type;
+	}
 	
 	public String getC_serial() {
 		return c_serial;

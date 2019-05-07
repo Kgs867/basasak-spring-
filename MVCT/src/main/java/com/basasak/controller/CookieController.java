@@ -9,12 +9,18 @@ import java.util.Locale;
 import javax.inject.Inject;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.basasak.dao.CookieAction;
+import com.basasak.dto.CartDTO;
 import com.basasak.dto.CookieDTO;
+import com.basasak.dto.LoginDTO;
+import com.basasak.service.CookieService;
 
 
 /**
@@ -23,15 +29,57 @@ import com.basasak.dto.CookieDTO;
 @Controller
 public class CookieController {
 	@Inject
-	private CookieAction action;
+	private CookieService action;
 	
 	@RequestMapping(value = "cookielist.do", method = RequestMethod.GET) 
-	public ModelAndView home(Locale locale, Model model) throws Exception{
+	public ModelAndView cookieList(Locale locale, Model model) throws Exception{
 		ModelAndView mav=new ModelAndView("cookie");
 		List<CookieDTO> list=action.cookieList();
 		mav.addObject("articleList", list);
 		return mav;
 	}
+	@RequestMapping(value = "cookieView.do", method = RequestMethod.GET) 
+	public ModelAndView cookieView(@ModelAttribute("c_serial") CookieDTO c_serial) throws Exception{
+		ModelAndView mav=new ModelAndView("cookieView");
+		System.out.println(c_serial);
+		CookieDTO list=action.cookieView(c_serial);
+		mav.addObject("article", list);
+		return mav;
+	}
+	@RequestMapping(value = "cartView.do", method = RequestMethod.GET)
+	public ModelAndView cartView() throws Exception{
+		ModelAndView mav=new ModelAndView("cart");
+		return mav;
+	}
+	@RequestMapping(value = "cartdata.do", method = RequestMethod.POST) 
+	@ResponseBody
+	public ModelAndView cartdata() throws Exception{
+		ModelAndView mav=new ModelAndView("cartdata");
+		return mav;
+	}
+	
+	@RequestMapping(value = "cartupdate.do", method = RequestMethod.POST) 
+	@ResponseBody
+	public ModelAndView cartdelete() throws Exception{
+		ModelAndView mav=new ModelAndView("cartupdate");
+		return mav;
+	}
+	
+	@RequestMapping(value = "cartdelete.do", method = RequestMethod.POST) 
+	@ResponseBody
+	public ModelAndView cartupdate() throws Exception{
+		ModelAndView mav=new ModelAndView("cartdelete");
+		return mav;
+	}
+	
+//	@RequestMapping(value = "cartView.do", method = RequestMethod.GET) 
+//	public ModelAndView CartView(@RequestParam("id") String id) throws Exception{
+//		ModelAndView mav=new ModelAndView("cartView");
+//		System.out.println(id);
+//		List<CartDTO> list=action.CartView(id);
+//		mav.addObject("article", list);
+//		return mav;
+//	}
 	
 }
  

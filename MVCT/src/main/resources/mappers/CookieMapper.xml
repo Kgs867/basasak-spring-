@@ -4,10 +4,21 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="Cookie">
-	<select id="List" resultType="cookieDTO">
+	<select id="CList" resultType="cookieDTO">
 		select * from Cookie
 	</select>
+	
+	
+	
+	<select id="CView" resultType="cookieDTO"
+		parameterType="cookieDTO">
+		select Cookie.*, cookiecategory.c_name  from Cookie,cookiecategory where c_serial=#{c_serial} and Cookie.c_type=cookiecategory.c_type
+	</select>
+
 </mapper>
+
+	
+
 
 
 
