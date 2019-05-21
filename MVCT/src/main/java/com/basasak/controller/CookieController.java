@@ -35,6 +35,8 @@ public class CookieController {
 	@Inject
 	private CookieService action;
 	
+	private IndexController index;
+	
 	@RequestMapping(value = "cookielist.do", method = RequestMethod.GET) 
 	public ModelAndView cookieList() throws Exception{
 		ModelAndView mav=new ModelAndView("cookie");
@@ -91,11 +93,15 @@ public class CookieController {
 		return cookieList();
 	}
 	
-	@RequestMapping(value = "addCart.do", method = RequestMethod.POST) 
-	public String addOdder(@ModelAttribute("c_serial") OdderDTO odder, HttpSession session) throws Exception{
-		action.addOdder(odder, (String)session.getAttribute("id"));
-		System.out.println(odder+" "+session.getAttribute("id"));
-		return "redirect:index.do";
+	@RequestMapping(value = "addOdder.do", method = RequestMethod.GET) 
+	public ModelAndView addOdder(HttpSession session,@RequestParam("zip") String zip,
+			@RequestParam("addr1") String addr1,@RequestParam("addr2") String addr2) throws Exception{
+		ModelAndView mav=new ModelAndView("index");
+		System.out.println(zip+addr1+addr2);
+		String addr=zip+","+addr1+","+addr2;
+		List<CartDTO> odder= action.listCart((String)session.getAttribute("id"));
+		action.addOdder(odder,(String)session.getAttribute("id"),addr);
+		return mav;
 	}
 	
 }

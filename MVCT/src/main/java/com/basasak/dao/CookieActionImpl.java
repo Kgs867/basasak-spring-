@@ -49,23 +49,36 @@ public class CookieActionImpl extends SqlSessionDaoSupport implements CookieActi
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		
-		
+	}
+	
+	public List<CartDTO> listCart(String id) {
+		return getSqlSession().selectList("Cart.CList",id);
 	}
 	
 	public int odderMax(String id) {
-		int omax;
-		if (getSqlSession().selectOne("Cart.OMax")!=null) {
-			omax=getSqlSession().selectOne("Cart.OMax");
-		}else {
+		int omax=0;
+		omax=getSqlSession().selectOne("Cart.OMax",id);
+		System.out.println("odderMax"+id);
+		if (omax==0) {
 			omax=1;
 		}
 		return omax;
 		
 	}
-	public void addOdder(OdderDTO odder,String id) {
-		odder.setO_num(id+String.format("%03d",odderMax(id)));
-		getSqlSession().insert("Cart.OAdd", odder);
+	public void addOdder(List<CartDTO> cart,String id,String addr) {
+		System.out.println("addOdder#############"+cart.size()+"######"+ id);
+		for (int i = 0; i < cart.size() ; i++) {
+			OdderDTO odder=new OdderDTO();
+			odder.setO_num(id+String.format("%03d",odderMax(id)));
+			odder.setO_product(cart.get(i).getC_product());
+			odder.setO_count(cart.get(i).getSb_count());
+			odder.setO_price(cart.get(i).getSb_price());
+			odder.setM_id(id);
+			odder.setO_addr(addr);
+			odder.setC_serial(cart.get(i).getC_serial());
+			getSqlSession().insert("Cart.OAdd",odder);
+		}
+		deleteCart(id);
 		
 //		pstmt.setString(1, maxid);
 //		System.out.println("여기까진 완료 --1"+rs.getString("c_product"));
@@ -81,5 +94,12 @@ public class CookieActionImpl extends SqlSessionDaoSupport implements CookieActi
 //		pstmt.setString(8,id);
 //		System.out.println("여기까진 완료 --8");
 //		pstmt.setString(9, rs.getString("c_serial"));
+	}
+
+	@Override
+	public void deleteCart(String id) {
+		
+		getSqlSession().delete("Cart.CDelete",id);
+		System.out.println("cart 청소");
 	}
 }

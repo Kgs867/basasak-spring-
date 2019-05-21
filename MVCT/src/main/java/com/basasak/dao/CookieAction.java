@@ -17,5 +17,9 @@ public interface CookieAction {
 	
 	public int odderMax(String id);
 	
-	public void addOdder(OdderDTO odder,String id);
+	public void addOdder(List<CartDTO> cart,String id,String addr);
+	
+	public List<CartDTO> listCart(String id);
+	
+	public void deleteCart(String id);
 }

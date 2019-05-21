@@ -46,8 +46,13 @@ public class CooKieServiceImpl implements CookieService {
 	}
 
 	@Override
-	public void addOdder(OdderDTO odder, String id) {
-		cookie.addOdder(odder, id);
+	public void addOdder(List<CartDTO> cart, String id,String addr) {
+		cookie.addOdder(cart, id,addr);
+	}
+
+	@Override
+	public List<CartDTO> listCart(String id) {
+		return cookie.listCart(id);
 	}
 
 }

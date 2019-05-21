@@ -22,16 +22,7 @@ public class IndexController {
 	 * Simply selects the home view to render by returning its name.
 	 */
 	@RequestMapping(value = "index.do", method = RequestMethod.GET)
-	public String home(Locale locale, Model model) {
-
-		
-		Date date = new Date();
-		DateFormat dateFormat = DateFormat.getDateTimeInstance(DateFormat.LONG, DateFormat.LONG, locale);
-		
-		String formattedDate = dateFormat.format(date);
-		
-		model.addAttribute("serverTime", formattedDate );
-		
+	public String home() {
 		return "index";
 	}
 	
