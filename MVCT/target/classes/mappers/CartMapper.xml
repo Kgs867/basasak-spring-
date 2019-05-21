@@ -8,13 +8,19 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		select * from shopb where m_id=#{id}
 	</select>
 	<select id="CMax" resultType="int" parameterType="string">
-		select max(sb_serial) from shopb where m_id=#{id}
+		select max(substr(sb_serial,-3))+1 from shopb where m_id=#{id}
 	</select>
 	
-	<!-- <insert id="CAdd">
-		insert into shopb()
-	</insert> -->
+	<insert id="CAdd" parameterType="cartDTO">
+		insert into shopb(sb_serial,sb_count,sb_price,sb_point,m_id,c_serial)values(#{sb_serial},#{sb_count},#{sb_price},#{sb_point},#{m_id},#{c_serial})
+	</insert>
+	<select id="OMax">
+		select max(substr(o_num,-3))+1 from odder where m_id=#{id} 
+	</select>
 	
+	<insert id="OAdd">
+		insert into odder values(#{o_num},#{c_product},#{sb_count},#{sb_price},#{sb_point},"배송중",#{o_addr},now(),#{m_id},#{c_serial})
+	</insert>
 
 </mapper>
 
