@@ -1,6 +1,7 @@
 package com.basasak.service;
 
 import java.util.List;
+import java.util.Map;
 
 import javax.inject.Inject;
 
@@ -15,9 +16,14 @@ public class ReviewServiceImpl implements ReviewService {
 	private ReviewAction review;
 
 	@Override
-	public List<BoardDTO> reviewList() throws Exception {
+	public List<BoardDTO> reviewList(Map<String,Object> map) throws Exception {
 		// TODO Auto-generated method stub
-		return review.reviewList();
+		return review.reviewList(map);
+	}
+	@Override
+	public int reviewCount(Map<String, Object> map) {
+		// TODO Auto-generated method stub
+		return review.reviewCount(map);
 	}
 	@Override
 	public BoardDTO reviewContent(int r_num) throws Exception {

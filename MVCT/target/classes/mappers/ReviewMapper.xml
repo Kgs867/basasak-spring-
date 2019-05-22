@@ -4,8 +4,42 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="Review">
-	<select id="RList" resultType="boardDTO" >
-		select * from review order by r_num desc
+	<select id="RList" resultType="boardDTO"  parameterType="map" >
+		select c.*
+            from ( select a.*, @RNUM := @RNUM+1  rnum
+                from (select * from review
+                   <where>
+			<if test="keyWord!=null and keyField=='r_title'">
+				r_title like CONCAT('%',#{keyWord},'%')
+			</if>
+			<if test="keyWord!=null and keyField=='r_content'">
+				r_content like CONCAT('%',#{keyWord},'%')
+			</if>
+			<if test="keyWord!=null and keyField=='all'">
+				r_title like CONCAT('%',#{keyWord},'%') or
+				r_content like CONCAT('%',#{keyWord},'%')
+			</if>
+		</where>       
+                     order by r_num desc)a,(select @RNUM:=0)R)c
+  <![CDATA[
+    where rnum >=#{start} AND rnum <=#{end}
+    ]]>
+	</select>
+	
+	<select id="RCount" resultType="int"  parameterType="map" >
+		select count(*) from review
+		<where>
+			<if test="keyWord!=null and keyField=='title'">
+				r_title like '%' || #{keyWord} || '%'
+			</if>
+			<if test="keyWord!=null and keyField=='content'">
+				r_content like '%' || #{keyWord} || '%'
+			</if>
+			<if test="keyWord!=null and keyField=='all'">
+				r_title like '%' || #{keyWord} || '%' or
+				r_content like '%' || #{keyWord} || '%'
+			</if>
+		</where>
 	</select>
 	
 	<select id="RContent" resultType="boardDTO" parameterType="int">

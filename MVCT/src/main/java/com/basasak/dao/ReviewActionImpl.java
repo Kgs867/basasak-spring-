@@ -1,6 +1,7 @@
 package com.basasak.dao;
 
 import java.util.List;
+import java.util.Map;
 
 import org.mybatis.spring.support.SqlSessionDaoSupport;
 import org.springframework.stereotype.Repository;
@@ -10,10 +11,14 @@ import com.basasak.dto.BoardDTO;
 public class ReviewActionImpl extends SqlSessionDaoSupport implements ReviewAction {
 
 	@Override
-	public List<BoardDTO> reviewList() throws Exception {
+	public List<BoardDTO> reviewList(Map<String,Object> map) throws Exception {
 		// TODO Auto-generated method stub
 		System.out.println("review action list ½ÇÇà");
-		return getSqlSession().selectList("Review.RList");
+		return getSqlSession().selectList("Review.RList",map);
+	}
+	
+	public int reviewCount(Map<String,Object> map) {
+		return getSqlSession().selectOne("Review.RCount",map);
 	}
 
 	@Override

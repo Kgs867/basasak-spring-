@@ -2,9 +2,12 @@ package com.basasak.controller;
 
 
 import java.text.DateFormat;
+import java.util.Collections;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Locale;
+import java.util.Map;
 
 import javax.inject.Inject;
 import org.springframework.stereotype.Controller;
@@ -23,6 +26,7 @@ import com.basasak.dto.CookieDTO;
 import com.basasak.dto.LoginDTO;
 import com.basasak.service.CookieService;
 import com.basasak.service.ReviewService;
+import com.basasak.util.PagingUtil;
 
 
 /**
@@ -34,10 +38,36 @@ public class ReviewController {
 	private ReviewService action;
 	
 	@RequestMapping(value = "review.do", method = RequestMethod.GET) 
-	public ModelAndView reviewList() throws Exception{
+	public ModelAndView reviewList(@RequestParam(value="pageNum",defaultValue="1") int currentPage,
+		    @RequestParam(value="keyField",defaultValue="") String keyField,
+		    @RequestParam(value="keyWord",defaultValue="") String keyWord) throws Exception{
+		System.out.println(keyWord+"#################"+keyField);
 		ModelAndView mav=new ModelAndView("review");
-		List<BoardDTO> list=action.reviewList();
+		Map<String,Object> map=new HashMap<String,Object>();
+		map.put("keyField", keyField);
+		map.put("keyWord", keyWord);
+		
+		//총레코드수 또는 검색된 글의 총레코드수
+		int count=action.reviewCount(map);
+		
+		PagingUtil page=new PagingUtil(currentPage,count,10,10,"review.do");
+		System.out.println(page.getStartCount());
+		//start=>페이지당 맨 첫번째 나오는 게시물 번호
+		map.put("start",page.getStartCount());//<->map.get("start")=>#{start}
+		map.put("end", page.getEndCount());
+		
+		List<BoardDTO> list=null;
+		
+		if(count > 0) {
+			System.out.println("여기는 DAO호출");
+			list=action.reviewList(map);//keyField,keyWord,start,end
+		}else {
+			list=Collections.emptyList();//0 적용
+		}
+		System.out.println("ListController클래스의 count=>"+count);
+		
 		mav.addObject("articleList",list);
+		mav.addObject("pagingHtml",page.getPagingHtml());
 		
 		return mav;
 	}
@@ -82,7 +112,7 @@ public class ReviewController {
 		System.out.println(boardDTO.getM_id());
 		
 		action.reviewInsert(boardDTO);
-		return reviewList();
+		return reviewList(1,"","");
 	}
 	
 	@RequestMapping(value = "updateForm.do", method = RequestMethod.GET) 

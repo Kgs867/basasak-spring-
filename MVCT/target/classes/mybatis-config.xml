@@ -8,10 +8,7 @@
 		<typeAlias type="com.basasak.dto.LoginDTO" alias="loginDTO" />
 		<typeAlias type="com.basasak.dto.CookieDTO" alias="cookieDTO" />
 		<typeAlias type="com.basasak.dto.CartDTO" alias="cartDTO" />
-<<<<<<< HEAD
 		<typeAlias type="com.basasak.dto.BoardDTO" alias="boardDTO" />
-=======
 		<typeAlias type="com.basasak.dto.OdderDTO" alias="odderDTO" />
->>>>>>> refs/remotes/origin/kgs
 	</typeAliases>
 </configuration>
