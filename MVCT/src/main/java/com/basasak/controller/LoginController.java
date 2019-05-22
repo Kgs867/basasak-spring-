@@ -36,6 +36,7 @@ public class LoginController {
 		ModelAndView mav=new ModelAndView("login");
 		System.out.println("login ½ÇÇà");
 		return mav;
+
 	}
 	
 	@RequestMapping(value = "login.do", method = RequestMethod.POST)
