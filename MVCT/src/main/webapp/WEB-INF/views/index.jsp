@@ -359,6 +359,7 @@
 
                 <div class="container-fluid">
                     <div class="portfolio-row">
+                    
                         <div id="portfolio-item-container" class="popup-gallery max-col-4" data-layoutmode="fitRows">
                             <div class="portfolio-item web-design wordpress">
                                 <figure>
@@ -371,7 +372,6 @@
                                     <h3 class="portfolio-title"><a href="#" title="Portfolio name">촉촉하고 부드러운 리얼케이크</a></h3>
                                     <div class="portfolio-tags">
                                         <a href="#">오예스</a>
-                                        
                                     </div><!-- End .portfolio-tags -->
                                 </div><!-- End .portfolio-meta -->
                             </div><!-- End .portfolio-item -->

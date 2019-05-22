@@ -159,7 +159,7 @@
 
 			<div class="mb10"></div>
 			<!-- margin -->
-			<form action="odder.do">
+			<form action="addOdder.do">
 				<div class="container-fluid">
 					<div class="row">
 						<div class="col-md-7">

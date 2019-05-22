@@ -189,10 +189,10 @@
                                         </div>End .filter-color-container
                                     </div>End .col-xs-6 -->
                                 </div><!-- End .row -->
-								<form action="/Project/addcartPro.do" method="post">
+								<form action="addCart.do" method="post">
                                 <div class="product-action">
                                     <div class="product-quantity">
-                                        <input type="number" name="count" class="form-control" min="1" max="999" placeholder="1" value="1">
+                                        <input type="number" name="sb_count" class="form-control" min="1" max="999" placeholder="1" value="1">
                                     </div><!-- end .product-quantity -->
                                     <input type="hidden" name="c_product" value=${article.c_product }>
                                     <input type="hidden" name="c_price" value=${article.c_price }>

@@ -234,6 +234,7 @@
 							<nav class="pagination-container">
 								<label></label>
 								<ul class="pagination">
+								${pagingHtml}
 									<c:if test="${pgList.startPage > pgList.blockSize}">
 										<a
 											href="/Project/cookielist.do?pageNum=${pgList.startPage-pgList.blockSize}&search=${search}&searchtext=${searchtext}">[이전]</a>
