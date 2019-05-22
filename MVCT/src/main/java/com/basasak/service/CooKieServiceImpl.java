@@ -1,6 +1,7 @@
 package com.basasak.service;
 
 import java.util.List;
+import java.util.Map;
 
 import javax.inject.Inject;
 
@@ -17,9 +18,13 @@ public class CooKieServiceImpl implements CookieService {
 	private CookieAction cookie;
 
 	@Override
-	public List<CookieDTO> cookieList() throws Exception {
+	public List<CookieDTO> cookieList(Map<String, Object> map) throws Exception {
 		System.out.println("cookieList service ½ÇÇà");
-		return cookie.cookieList();
+		return cookie.cookieList(map);
+	}
+	
+	public int cookieCount(Map<String, Object> map) {
+		return cookie.cookieCount(map);
 	}
 
 	@Override

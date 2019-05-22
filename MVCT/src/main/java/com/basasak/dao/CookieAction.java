@@ -1,15 +1,18 @@
 package com.basasak.dao;
 
 import java.util.List;
+import java.util.Map;
 
 import com.basasak.dto.CartDTO;
 import com.basasak.dto.CookieDTO;
 import com.basasak.dto.OdderDTO;
 
 public interface CookieAction {
-	public List<CookieDTO> cookieList() throws Exception;
+	public List<CookieDTO> cookieList(Map<String, Object> map) throws Exception;
 
 	public CookieDTO cookieView(CookieDTO cookieDTO) throws Exception;
+	
+	public int cookieCount(Map<String, Object> map);
 
 	public int cartMax(String id);
 	

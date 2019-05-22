@@ -4,8 +4,46 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 <mapper namespace="Cookie">
-	<select id="CList" resultType="cookieDTO">
+	<!-- <select id="CList" resultType="cookieDTO" parameterType="map">
 		select * from Cookie
+	</select> -->
+	
+	<select id="CList" resultType="cookieDTO" parameterType="map">
+		select *
+            from ( select a.*, @RNUM := @RNUM+1  rnum
+                from (select * from Cookie
+                   <where>
+                     <if test="keyWord!=null and keyField=='title'">
+                            c_product like '%' || #{keyWord} || '%'
+                     </if>
+                     <if test="keyWord!=null and keyField=='writer'">
+                            c_intro like '%' || #{keyWord} || '%'
+                     </if>
+                     <if test="keyWord!=null and keyField=='all'">
+                            c_product like '%' || #{keyWord} || '%'  or
+                            c_intro like '%' || #{keyWord} || '%'
+                     </if>
+                   </where>        
+                     order by c_serial desc)a,(select @RNUM:=0)R)c
+  <![CDATA[
+    where rnum >=#{start} AND rnum <=#{end}
+    ]]>
+	</select>
+	
+	<select id="CCount" resultType="int" parameterType="map" >
+		select count(*) from Cookie
+					<where>
+                     <if test="keyWord!=null and keyField=='title'">
+                            c_product like '%' || #{keyWord} || '%'
+                     </if>
+                     <if test="keyWord!=null and keyField=='writer'">
+                            c_intro like '%' || #{keyWord} || '%'
+                     </if>
+                     <if test="keyWord!=null and keyField=='all'">
+                            c_product like '%' || #{keyWord} || '%'  or
+                            c_intro like '%' || #{keyWord} || '%'
+                     </if>
+                   </where> 
 	</select>
 	
 	

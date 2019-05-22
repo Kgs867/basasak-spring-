@@ -1,6 +1,7 @@
 package com.basasak.dao;
 
 import java.util.List;
+import java.util.Map;
 
 import org.mybatis.spring.support.SqlSessionDaoSupport;
 import org.springframework.stereotype.Repository;
@@ -13,9 +14,12 @@ import com.basasak.dto.OdderDTO;
 public class CookieActionImpl extends SqlSessionDaoSupport implements CookieAction {
 
 	@Override
-	public List<CookieDTO> cookieList() throws Exception {
+	public List<CookieDTO> cookieList(Map<String, Object> map) throws Exception {
 		System.out.println("cookie action list ½ÇÇà");
-		return getSqlSession().selectList("Cookie.CList");
+		return getSqlSession().selectList("Cookie.CList",map);
+	}
+	public int cookieCount(Map<String, Object> map) {
+		return getSqlSession().selectOne("Cookie.CCount",map);
 	}
 
 	@Override
