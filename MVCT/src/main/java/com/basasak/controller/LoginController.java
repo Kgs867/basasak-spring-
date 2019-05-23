@@ -7,10 +7,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 import com.basasak.dao.MemberAction;
 import com.basasak.dao.MemberActionImpl;
 import com.basasak.dto.LoginDTO;
+import com.basasak.dto.MemberDTO;
 import com.basasak.service.MemberService;
 
 
@@ -61,6 +63,42 @@ public class LoginController {
 		System.out.println("logout.do 실행");
 		session.invalidate();
 		ModelAndView mav=new ModelAndView("index");
+		return mav;
+	}
+	
+	@RequestMapping(value = "register.do", method = RequestMethod.GET)
+	public ModelAndView registerget(HttpSession session) {
+		ModelAndView mav=new ModelAndView("register");
+		return mav;
+	}
+	
+	
+	@RequestMapping(value = "register.do", method = RequestMethod.POST)
+	public ModelAndView register(@ModelAttribute("member") MemberDTO member,@RequestParam(value="m_addr2") String m_addr2) {
+		System.out.println("register.do 실행"+member.getM_id());
+		member.setM_addr(member.getM_addr()+m_addr2);
+		service.register(member);
+		ModelAndView mav=new ModelAndView("index");
+		return mav;
+	}
+	@RequestMapping(value = "mypage.do", method = RequestMethod.GET)
+	public ModelAndView memberedit(@ModelAttribute("member") MemberDTO member) {
+		ModelAndView mav=new ModelAndView("mypage");
+	
+		return mav;
+	}
+	@RequestMapping(value = "memberedit.do", method = RequestMethod.GET)
+	public ModelAndView memberedit(@ModelAttribute("member") MemberDTO member,HttpSession session) {
+		ModelAndView mav=new ModelAndView("memberedit");
+		mav.addObject("member",service.memberInfo((String)session.getAttribute("id")));
+		return mav;
+	}
+	
+	@RequestMapping(value = "memberedit.do", method = RequestMethod.POST)
+	public ModelAndView membereditdo(@ModelAttribute("member") MemberDTO member, @RequestParam(value="m_addr2") String m_addr2) {
+		member.setM_addr(member.getM_addr()+m_addr2);
+		ModelAndView mav=new ModelAndView("index");
+		service.memberEdit(member);
 		return mav;
 	}
 	
