@@ -296,46 +296,61 @@
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-md-3 col-sm-6">
-                            <div class="service">
-                            
-                                <!-- <div class="service-icon custom wow rotateIn"> -->
-                                    <img src="resources/assets/images/icon1.png" style="width:25%;"/>
-                                <!-- </div>End .service-icon -->
-                                <h3 class="service-title"><a href="#">신규가입혜택</a></h3>
-                                <p>신규로 가입하는 회원분들만 받을 수 있는 특별한 혜택!</p>
-                            </div><!-- End .service -->
+                            <div class="service" >
+						<a href="eventpage1.do">
+					
+							<img src="resources/assets/images/icon1.png" style="width: 25%;" />
+							<!-- </div>End .service-icon -->
+							<h3 class="service-title">
+								신규가입혜택
+							</h3>
+							<p class="cfon">신규로 가입하는 회원분들만 받을 수 있는 특별한 혜택!</p>
+							</a>							
+						</div>
                         </div><!-- End .col-md-3 -->
 
                         <div class="col-md-3 col-sm-6">
                             <div class="service">
-                                <!-- <div class="service-icon custom wow rotateIn" data-wow-delay="0.15s"> -->
-                                    <img src="resources/assets/images/icon3.png" style="width:25%;"/>
-                                <!--</div> End .service-icon -->
-                                <h3 class="service-title"><a href="#">적립금혜택</a></h3>
-                                <p>구매할수록 쌓이는 적립금으로 과자를 무료로 구매!</p>
-                            </div><!-- End .service -->
+						<a href="eventpage2.do">
+							<!-- <div class="service-icon custom wow rotateIn" data-wow-delay="0.15s"> -->
+							<img src="resources/assets/images/icon3.png" style="width: 25%;" />
+							<!--</div> End .service-icon -->
+							<h3 class="service-title">
+								적립금혜택
+							</h3>
+							<p class="cfon">구매할수록 쌓이는 적립금으로 과자를 무료로 구매!</p>
+							</a>
+						</div>
                         </div><!-- End .col-md-3 -->
 
                         <div class="clearfix visible-sm"></div><!-- End .clearfix -->
 
                         <div class="col-md-3 col-sm-6">
-                            <div class="service">
-                                <!-- <div class="service-icon custom wow rotateIn" data-wow-delay="0.3s"> -->
-                                   <img src="resources/assets/images/icon4.png" style="width:25%;"/>
-                                <!--</div> End .service-icon -->
-                                <h3 class="service-title"><a href="#">배송비무료</a></h3>
-                                <p>30,000원 이상 구매시 배송비 무료</p>
-                            </div><!-- End .service -->
+                          <div class="service">
+							<!-- <div class="service-icon custom wow rotateIn" data-wow-delay="0.3s"> -->
+							<a href="eventpage3.do">
+							<img src="resources/assets/images/icon4.png" style="width: 25%;" />
+							<!--</div> End .service-icon -->
+							<h3 class="service-title">
+								배송비무료
+							</h3>
+							<p class="cfon">30,000원 이상 구매시 배송비 무료</p>
+							</a>
+						</div>
                         </div><!-- End .col-md-3 -->
 
                         <div class="col-md-3 col-sm-6">
-                            <div class="service">
-                                <!-- <div class="service-icon custom wow rotateIn" data-wow-delay="0.45s"> -->
-                                    <img src="resources/assets/images/icon2.png" style="width:25%;"/>
-                                <!--</div> End .service-icon -->
-                                <h3 class="service-title"><a href="#">리뷰이벤트</a></h3>
-                                <p>상품 후기를 남겨주신 분께는 추가 적립금 지급~</p>
-                            </div><!-- End .service -->
+                          <div class="service">
+							<!-- <div class="service-icon custom wow rotateIn" data-wow-delay="0.45s"> -->
+							<a href="eventpage4.do">
+							<img src="resources/assets/images/icon2.png" style="width: 25%;" />
+							<!--</div> End .service-icon -->
+							<h3 class="service-title">
+								리뷰이벤트
+							</h3>
+							<p class="cfon">상품 후기를 남겨주신 분께는 추가 적립금 지급~</p>
+							</a>
+						</div>
                         </div><!-- End .col-md-3 -->
                     </div><!-- End .row -->
                 </div><!-- End .container-fluid -->
