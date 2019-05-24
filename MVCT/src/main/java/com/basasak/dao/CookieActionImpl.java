@@ -35,7 +35,15 @@ public class CookieActionImpl extends SqlSessionDaoSupport implements CookieActi
 
 	public int cartMax(String id) {
 		System.out.println("cart action 실행 CartMax" + id);
-		int max=getSqlSession().selectOne("Cart.CMax", id);
+		
+		int max=1;
+		if (getSqlSession().selectOne("Cart.CMax", id)==null) {
+			System.out.println("max 값 "+max);
+			return max;
+		}else {
+			System.out.println("max 값 "+max);
+			max=getSqlSession().selectOne("Cart.CMax", id);
+		}
 		System.out.println("max 값 "+max);
 		return max;
 	}
@@ -105,5 +113,15 @@ public class CookieActionImpl extends SqlSessionDaoSupport implements CookieActi
 		
 		getSqlSession().delete("Cart.CDelete",id);
 		System.out.println("cart 청소");
+	}
+	@Override
+	public int cartCount(String id) {
+		int count=0;
+		if (getSqlSession().selectOne("Cart.CCount",id)==null) {
+			return count;
+		}else {
+			return getSqlSession().selectOne("Cart.CCount",id);
+		}
+		
 	}
 }

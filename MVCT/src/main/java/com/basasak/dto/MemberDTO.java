@@ -1,41 +1,62 @@
 package com.basasak.dto;
 
 public class MemberDTO {
-	private String id;
-	private String password;
-	private String email;
-	private String phone;
-	private String address;
+	private String m_id; 
+	private String m_pw;
+	private String m_name;
+	private String m_birth; //생년월일
+	private String m_email;
+	private String m_ph;
+	private String m_addr;
+	private String m_gender;
+	public String getM_id() {
+		return m_id;
+	}
+	public void setM_id(String m_id) {
+		this.m_id = m_id;
+	}
+	public String getM_pw() {
+		return m_pw;
+	}
+	public void setM_pw(String m_pw) {
+		this.m_pw = m_pw;
+	}
+	public String getM_name() {
+		return m_name;
+	}
+	public void setM_name(String m_name) {
+		this.m_name = m_name;
+	}
+	public String getM_birth() {
+		return m_birth;
+	}
+	public void setM_birth(String m_birth) {
+		this.m_birth = m_birth;
+	}
+	public String getM_email() {
+		return m_email;
+	}
+	public void setM_email(String m_email) {
+		this.m_email = m_email;
+	}
+	public String getM_ph() {
+		return m_ph;
+	}
+	public void setM_ph(String m_ph) {
+		this.m_ph = m_ph;
+	}
+	public String getM_addr() {
+		return m_addr;
+	}
+	public void setM_addr(String m_addr) {
+		this.m_addr = m_addr;
+	}
+	public String getM_gender() {
+		return m_gender;
+	}
+	public void setM_gender(String m_gender) {
+		this.m_gender = m_gender;
+	}
 	
-	public String getId() {
-		return id;
-	}
-	public void setId(String id) {
-		this.id = id;
-	}
-	public String getPassword() {
-		return password;
-	}
-	public void setPassword(String password) {
-		this.password = password;
-	}
-	public String getEmail() {
-		return email;
-	}
-	public void setEmail(String email) {
-		this.email = email;
-	}
-	public String getPhone() {
-		return phone;
-	}
-	public void setPhone(String phone) {
-		this.phone = phone;
-	}
-	public String getAddress() {
-		return address;
-	}
-	public void setAddress(String address) {
-		this.address = address;
-	}
 	
 }

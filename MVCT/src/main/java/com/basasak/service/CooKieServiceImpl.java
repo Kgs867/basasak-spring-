@@ -60,4 +60,10 @@ public class CooKieServiceImpl implements CookieService {
 		return cookie.listCart(id);
 	}
 
+	@Override
+	public int cartCount(String id) {
+		// TODO Auto-generated method stub
+		return cookie.cartCount(id);
+	}
+
 }

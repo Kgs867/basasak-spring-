@@ -1,6 +1,6 @@
 package com.basasak.util;
 
-//페이징처리해주는 클래스
+
 public class PagingUtil {
 	
 	private int startCount;	 // 한 페이지에서 보여줄 게시글의 시작 번호
