@@ -41,14 +41,19 @@ public class ReviewController {
 	public ModelAndView reviewList(@RequestParam(value="pageNum",defaultValue="1") int currentPage,
 		    @RequestParam(value="keyField",defaultValue="") String keyField,
 		    @RequestParam(value="keyWord",defaultValue="") String keyWord) throws Exception{
-		System.out.println(keyWord+"#################"+keyField);
+		System.out.println(keyWord+"#################"+keyField+"##########"+currentPage);
 		ModelAndView mav=new ModelAndView("review");
 		Map<String,Object> map=new HashMap<String,Object>();
+		
 		map.put("keyField", keyField);
 		map.put("keyWord", keyWord);
-		
+		int count;
 		//총레코드수 또는 검색된 글의 총레코드수
-		int count=action.reviewCount(map);
+		if (action.reviewCount(map)!=0) {
+			count=action.reviewCount(map);
+		}else {
+			count=1;
+		}
 		
 		PagingUtil page=new PagingUtil(currentPage,count,10,10,"review.do");
 		System.out.println(page.getStartCount());
@@ -67,17 +72,19 @@ public class ReviewController {
 		System.out.println("ListController클래스의 count=>"+count);
 		
 		mav.addObject("articleList",list);
+		mav.addObject("pageNum", currentPage);
+		mav.addObject("count", count);
 		mav.addObject("pagingHtml",page.getPagingHtml());
 		
 		return mav;
 	}
 	
 	@RequestMapping(value = "content.do", method = RequestMethod.GET) 
-	public ModelAndView reviewContent(@RequestParam(value="r_num") int r_num) throws Exception{
+	public ModelAndView reviewContent(@RequestParam(value="r_num") int r_num,@RequestParam(value="pageNum",defaultValue="1") int currentPage) throws Exception{
 		ModelAndView mav=new ModelAndView("content");
 		action.rViewUpdate(r_num);
 		BoardDTO content=action.reviewContent(r_num);
-		
+		mav.addObject("pageNum", currentPage);
 		mav.addObject("article",content);
 		
 		return mav;

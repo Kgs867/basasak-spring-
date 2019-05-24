@@ -14,6 +14,8 @@ public interface CookieService {
 	
 	public int cookieCount(Map<String, Object> map);
 	
+	public int cartCount(String id);
+	
 	public int cartMax(String id);
 	
 	public void addCart(String id,CartDTO c_cerial);

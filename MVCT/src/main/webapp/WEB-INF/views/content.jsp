@@ -52,12 +52,12 @@
 
 		<div class="main">
 			<div class="page-header largest parallax custom text-center"
-				style="background-image: url(resources/assets/images/page-header-bg.jpg)"
+				style="background-image: url(resources/assets/images/bisciut.png)"
 				data-0="background-position:50% 50%;"
 				data-top-bottom="background-position:50% 100%">
 				<div class="container-fluid">
 					<h1>
-						Elements <small>(Tables)</small>
+						리뷰게시판 <small></small>
 					</h1>
 					<ol class="breadcrumb">
 						<li><a href="index.html">Home</a></li>

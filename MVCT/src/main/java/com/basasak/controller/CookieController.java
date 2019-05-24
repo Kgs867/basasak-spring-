@@ -117,6 +117,8 @@ public class CookieController {
 	@RequestMapping(value = "addCart.do", method = RequestMethod.POST) 
 	public ModelAndView addCart(@ModelAttribute("c_serial") CartDTO c_serial, HttpSession session) throws Exception{
 		action.addCart((String)session.getAttribute("id"), c_serial);
+		session.setAttribute("sb_count", action.cartCount((String)session.getAttribute("id")));
+		session.setAttribute("headercookie", action.listCart((String)session.getAttribute("id")));
 		System.out.println(c_serial+" "+session.getAttribute("id"));
 		return cookieList(1,"","");
 	}

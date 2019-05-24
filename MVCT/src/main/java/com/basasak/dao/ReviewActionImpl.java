@@ -41,6 +41,10 @@ public class ReviewActionImpl extends SqlSessionDaoSupport implements ReviewActi
 	@Override
 	public int rMax() throws Exception {
 		// TODO Auto-generated method stub
+		int max=0;
+		if (getSqlSession().selectOne("Review.RMax")==null) {
+			return max;
+		}
 		return getSqlSession().selectOne("Review.RMax");
 	}
 	

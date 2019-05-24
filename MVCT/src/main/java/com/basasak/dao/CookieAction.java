@@ -16,6 +16,8 @@ public interface CookieAction {
 
 	public int cartMax(String id);
 	
+	public int cartCount(String id);
+	
 	public void addCart(String id,CartDTO c_cerial);
 	
 	public int odderMax(String id);

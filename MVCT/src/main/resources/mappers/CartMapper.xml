@@ -5,7 +5,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
 <mapper namespace="Cart">
 	<select id="CList" resultType="cartDTO" parameterType="string">
-		select shopb.*,cookie.c_product from shopb,cookie where m_id=#{id} and cookie.c_serial=shopb.c_serial
+		select shopb.*,cookie.c_product,cookie.c_img1 from shopb,cookie where m_id=#{id} and cookie.c_serial=shopb.c_serial
 	</select>
 	<select id="CMax" resultType="int" parameterType="string">
 		select max(substr(sb_serial,-3))+1 from shopb where m_id=#{id}
@@ -14,6 +14,9 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<insert id="CAdd" parameterType="cartDTO">
 		insert into shopb(sb_serial,sb_count,sb_price,sb_point,m_id,c_serial)values(#{sb_serial},#{sb_count},#{sb_price},#{sb_point},#{m_id},#{c_serial})
 	</insert>
+	<select id="CCount" parameterType="string" resultType="int">
+		select count(*) from shopb where m_id=#{id}
+	</select>
 	<select id="OMax" resultType="int" parameterType="string" >
 		select max(substr(o_num,-3))+1 from odder where m_id=#{id} 
 	</select>
