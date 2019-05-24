@@ -13,6 +13,7 @@ import com.basasak.dao.MemberAction;
 import com.basasak.dao.MemberActionImpl;
 import com.basasak.dto.LoginDTO;
 import com.basasak.dto.MemberDTO;
+import com.basasak.service.CookieService;
 import com.basasak.service.MemberService;
 
 
@@ -31,7 +32,8 @@ public class LoginController {
 //	private MemberAction memberaction =new MemberActionImpl(); 
 	@Inject
 	private MemberService service;
-	
+	@Inject
+	private CookieService action;
 	
 	@RequestMapping(value = "login.do", method = RequestMethod.GET)
 	public ModelAndView form() {
@@ -51,6 +53,9 @@ public class LoginController {
 		System.out.println(mlogin.getM_pw()+"==="+login.getM_pw());
 		if (mlogin.getM_pw().equals(login.getM_pw())) {
 			session.setAttribute("id", login.getM_id());
+			session.setAttribute("sb_count", action.cartCount((String)session.getAttribute("id")));
+			session.setAttribute("headercookie", action.listCart((String)session.getAttribute("id")));
+			System.out.println(session.getAttribute("cookie"));
 		}
 		
 		ModelAndView mav=new ModelAndView("index");

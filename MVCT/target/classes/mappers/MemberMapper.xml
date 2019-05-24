@@ -13,7 +13,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	</select>
 	
 	<insert id="register" parameterType="memberDTO">
-		insert into member values(#{m_id},#{m_pw},#{m_name},#{m_birth},#{m_email},#{m_ph},#{m_addr},#{m_gender},now())
+		insert into member values(#{m_id},#{m_pw},#{m_name},#{m_birth},#{m_ph},#{m_email},#{m_gender},now(),#{m_addr})
 	</insert>
 	<insert id="register2" parameterType="memberDTO">
 		insert into memberlogin values(#{m_id},#{m_pw},0)

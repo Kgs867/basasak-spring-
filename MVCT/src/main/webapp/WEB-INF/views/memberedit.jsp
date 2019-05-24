@@ -52,7 +52,7 @@
                             <div class="col-sm-6 ">
                                 <div class="form-group">
                                     <label>비밀번호</label>
-                                    <input type="text" id="m_pw" name="m_pw"class="form-control"  value="${member.m_pw}" required>
+                                    <input type="password" id="m_pw" name="m_pw"class="form-control"  value="${member.m_pw}" required>
                                 </div><!-- End .from-group -->
                             </div><!-- End .col-sm-6 -->
                         </div><!-- End .row -->
@@ -79,11 +79,12 @@
                             <div class="col-sm-6 ">
                                 <div class="form-group">
                                 <label>성별</label> <br>
-                                <c:if test="${member.m_gender}==0">
+                                ${member.m_gender}
+                                <c:if test="${member.m_gender} eq '남'">
                                     <input type="radio" value="남" id="men_check" name="m_gender" class="Gender" checked="checked" disabled> 남</c:if>
                                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                    <c:if test="${member.m_gender}!=0">
-                                    <input type="radio" value="여" id="women_check" name="m_gender" class="Gender" disabled> 여</c:if>
+                                    <c:if test="${member.m_gender} eq '여'">
+                                    <input type="radio" value="여" id="women_check" name="m_gender" class="Gender" checked="checked" disabled> 여</c:if>
                                 </div><!-- End .from-group -->
                             </div><!-- End .col-sm-6 -->
                         </div><!-- End .row -->

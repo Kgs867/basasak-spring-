@@ -1,7 +1,7 @@
 package com.basasak.dto;
 
 public class CartDTO {
-	String sb_serial,m_id,c_serial,c_product;	
+	String sb_serial,m_id,c_serial,c_product,c_img1;	
 	int sb_count,sb_price,sb_point,c_price;
 	public String getC_product() {
 		return c_product;

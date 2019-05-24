@@ -59,13 +59,13 @@
                             <div class="col-sm-6 ">
                                 <div class="form-group">
                                     <label>비밀번호</label>
-                                    <input type="text" id="m_pw" name="m_pw"class="form-control" placeholder="비밀번호" required>
+                                    <input type="password" id="m_pw" name="m_pw"class="form-control" placeholder="비밀번호" required>
                                 </div><!-- End .from-group -->
                             </div><!-- End .col-sm-6 -->
                             <div class="col-sm-6 ">
                                 <div class="form-group">
                                     <label>비밀번호 재확인</label>
-                                    <input type="text" id="m_pwcheck" name="m_pwcheck"class="form-control" placeholder="비밀번호 재확인" required>
+                                    <input type="password" id="m_pwcheck" name="m_pwcheck"class="form-control" placeholder="비밀번호 재확인" required>
                                 </div><!-- End .from-group -->
                             </div><!-- End .col-sm-6 -->
                         </div><!-- End .row -->

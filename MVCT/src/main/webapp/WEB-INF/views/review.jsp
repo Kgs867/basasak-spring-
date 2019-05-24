@@ -56,12 +56,12 @@
 
 		<div class="main">
 			<div class="page-header largest parallax custom text-center"
-				style="background-image: url(resources/assets/images/page-header-bg.jpg)"
+				style="background-image: url(resources/assets/images/bisciut.png)"
 				data-0="background-position:50% 50%;"
 				data-top-bottom="background-position:50% 100%">
 				<div class="container-fluid">
 					<h1>
-						Elements <small>(Tables)</small>
+						리뷰게시판 <small></small>
 					</h1>
 					<ol class="breadcrumb">
 						<li><a href="index.html">Home</a></li>
@@ -80,7 +80,7 @@
 				<div class="row">
 					<div class="col-sm-12">
 						<h2>
-							글목록<small>(전체글:${pgList.count})</small>
+							글목록<small>(전체글:${count})</small>
 						</h2>
 						<div class="table-responsive">
 
@@ -129,7 +129,7 @@
 										
 								</c:if>
  --%> <!-- 글상세보기 부분  --> <a
-												href="content.do?r_num=${article.r_num}&pageNum=${pgList.currentPage}">${article.r_title}</a>
+												href="content.do?r_num=${article.r_num}&pageNum=${pageNum}">${article.r_title}</a>
 												<c:if test="${article.r_view>=20}">
 													<img src="images/hot.gif" border="0" height="16">
 											</td>

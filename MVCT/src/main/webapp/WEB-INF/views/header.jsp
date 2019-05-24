@@ -71,58 +71,33 @@
 							<a href="#" class="header-cart-btn" data-toggle="dropdown"
 								 aria-haspopup="true" aria-expanded="false"> <span>
 									<i class="fa fa-shopping-basket"></i> <span
-									class="dcart-total-count" id="sbcnt">${sb_count}</span>
+									class="dcart-total-count" id="sbcnt"><c:out value="${sb_count}"/></span>
 							</span>
 							</a>
 							<div class="dropdown-menu">
-								<p>
-									2 item(s) in your cart - <span>$279.00</span>
-								</p>
+							<c:forEach items='${cookie}' var="cookie">
 								<div class="dcart-products">
 									<div class="product">
 										<figure>
 											<a href="#"> <img
-												src="resources/assets/images/products/thumbs/product1.jpg"
-												alt="Product">
+												src="${cookie.c_img1}"
+												alt="Product"/>
 											</a>
 										</figure>
 										<div class="product-meta">
 											<h5 class="product-title">
-												<a href="#">Oluptate cumque quo archi deleni.</a>
+												<a href="#">${cookie.c_product }</a>
 											</h5>
 											<div class="product-price-container">
-												<span class="product-price">$180.00</span>
+												<span class="product-price"><c:out value="${cookie.sb_price }"/></span>
 											</div>
 											<!-- End .product-price-container -->
-											<span class="product-quantity">x 1</span>
+											<span class="product-quantity">x <c:out value="${cookie.sb_count}"/></span>
 										</div>
 										<!-- End .product-meta -->
-										<a href="#" class="delete-btn" title="Delete Product"><i
-											class="fa fa-times"></i></a>
 									</div>
+									</c:forEach>
 									<!-- End .product -->
-									<div class="product">
-										<figure>
-											<a href="#"> <img
-												src="resources/assets/images/products/thumbs/product2.jpg"
-												alt="Product">
-											</a>
-										</figure>
-										<div class="product-meta">
-											<h5 class="product-title">
-												<a href="#">Lorem ipsum dolor sit amet consect.</a>
-											</h5>
-											<div class="product-price-container">
-												<span class="old-price">$140.00</span> <span
-													class="product-price">$99.00</span>
-											</div>
-											<!-- End .product-price-container -->
-											<span class="product-quantity">x 2</span>
-										</div>
-										<!-- End .product-meta -->
-										<a href="#" class="delete-btn" title="Delete Product"><i
-											class="fa fa-times"></i></a>
-									</div>
 									<!-- End .product -->
 								</div>
 								<!-- End .dcart-products -->
