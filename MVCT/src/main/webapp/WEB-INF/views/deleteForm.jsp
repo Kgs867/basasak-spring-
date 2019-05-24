@@ -88,7 +88,7 @@
 							<tr height="30">
 								<td align=center bgcolor="yellow"><input type="submit"
 									value="글삭제"> <input type="button" value="글목록"
-									onclick="document.location.href='review.do?pageNum=${pageNum}'">
+									onclick="document.location.href='review.do'">
 								</td>
 							</tr>
 						</table>

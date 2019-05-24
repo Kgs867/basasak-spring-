@@ -9,6 +9,7 @@
 		<typeAlias type="com.basasak.dto.CookieDTO" alias="cookieDTO" />
 		<typeAlias type="com.basasak.dto.CartDTO" alias="cartDTO" />
 		<typeAlias type="com.basasak.dto.BoardDTO" alias="boardDTO" />
+		<typeAlias type="com.basasak.dto.BoardNoticeDTO" alias="boardNoticeDTO" />
 		<typeAlias type="com.basasak.dto.OdderDTO" alias="odderDTO" />
 	</typeAliases>
 </configuration>

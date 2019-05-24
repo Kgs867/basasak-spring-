@@ -56,7 +56,7 @@
         
         
         
-        <script language="JavaScript">      
+        <!-- <script language="JavaScript">      
   			function deleteSave(){	
 				if(document.delForm.n_pw.value==''){
 	  				alert("비밀번호를 입력하십시오.");
@@ -64,7 +64,7 @@
 	  				return false;
  				}
   			}
-		</script>
+		</script> -->
 		
 		
 		
@@ -118,7 +118,7 @@
     <td align=center bgcolor="#b0e0e6">
       <input type="submit" value="글삭제" >
       <input type="button" value="글목록" 
-       onclick="document.location.href='notice.do?pageNum=${pageNum}'">     
+       onclick="document.location.href='notice.do'">
    </td>
  </tr>  
 </table> 
