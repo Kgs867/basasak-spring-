@@ -84,7 +84,7 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <label>이 름</label>
-                                        <input type="text" class="form-control" id="contactname" name="a_id" required>
+                                        <input type="text" class="form-control" id="contactname" name="a_id"  value="${id}" readonly>
                                     </div><!-- End .col-md-6 -->
                                     <div class="col-md-6">
                                         <label>비밀번호</label>

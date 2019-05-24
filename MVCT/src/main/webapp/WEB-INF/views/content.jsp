@@ -125,7 +125,7 @@
 						&nbsp;&nbsp;&nbsp;&nbsp; <input type="button" value="글삭제"
 							onclick="document.location.href='deleteForm.do?r_num=${article.r_num}&pageNum=${pageNum}'">
 						&nbsp;&nbsp;&nbsp;&nbsp; <input type="button" value="글목록"
-							onclick="document.location.href='review.do?pageNum=${pageNum}'">
+							onclick="document.location.href='review.do'">
 					</div>
 					<!-- End .entry-content-container -->
 
