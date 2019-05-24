@@ -109,7 +109,7 @@
 
                                 <input type="submit" class="btn btn-custom min-width" data-loading-text="Sending Message..." value="글수정">
                                 <input type="reset" class="btn btn-custom min-width" value="다시작성">
-                                <input type="button" class="btn btn-custom min-width" value="목록보기" onclick="document.location.href='notice.do?pageNum=${pageNum}'">
+                                <input type="button" class="btn btn-custom min-width" value="목록보기" onclick="document.location.href='notice.do'">
                             </form>
                         </div><!-- End .col-md-8 -->
 

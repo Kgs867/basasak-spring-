@@ -130,33 +130,16 @@
 						</table>
 						
 						<form align="center">
-						<c:if test="${pgList.startPage > pgList.blockSize}">
-				<a
-					href="notice.do?pageNum=${pgList.startPage-pgList.blockSize}&search=${search}&searchtext=${searchtext}">[이전]</a>
-			</c:if>
-			<c:forEach var="i" begin="${pgList.startPage}"
-				end="${pgList.endPage}">
-				<a
-					href="notice.do?pageNum=${i}&search=${search}&searchtext=${searchtext}">
-					<c:if test="${pgList.currentPage==i}">
-						<font color="red"><b>[${i}]</b></font>
-					</c:if> <c:if test="${pgList.currentPage!=i}">
-						${i}
-					</c:if>
-				</a>
-			</c:forEach>
-			<c:if test="${pgList.endPage < pgList.pageCount}">
-				<a href="notice.do?pageNum=${pgList.startPage+pgList.blockSize}&search=${search}&searchtext=${searchtext}">[다음]</a>
-			</c:if>
-</form>
+							${pagingHtml}
+						</form>
 			<p>
 				<!-- 검색어 추가(자주 검색이 되는 항목을 잘 선택) : 제목, 작성자, 제목+본문 -->
 			<form name="test" align="center" action="notice.do">
-				<select name="search">
+				<select name="keyField">
 					<option value="n_title">제목</option>
-					<option value="n_title_n_content">제목+본문</option>
-					<option value="a_id">작성자</option>
-				</select> <input type="text" size="15" name="searchtext">&nbsp;<input
+					<option value="all">제목+본문</option>
+
+				</select> <input type="text" size="15" name="keyWord">&nbsp;<input
 					type="submit" value="검색">
 			</form>
 						

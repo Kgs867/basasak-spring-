@@ -105,7 +105,7 @@
        onclick="document.location.href='deleteNoticeForm.do?n_num=${article.n_num}&pageNum=${pageNum}'">
 	   &nbsp;&nbsp;&nbsp;&nbsp; 
        <input type="button" value="글목록" 
-       onclick="document.location.href='notice.do?pageNum=${pageNum}'">
+       onclick="document.location.href='notice.do'">
                         </div>
                         </article>
                     
