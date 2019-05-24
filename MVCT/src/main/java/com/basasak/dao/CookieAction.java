@@ -24,6 +24,8 @@ public interface CookieAction {
 	
 	public void addOdder(List<CartDTO> cart,String id,String addr);
 	
+	public List<OdderDTO> odderList(String id);
+	
 	public List<CartDTO> listCart(String id);
 	
 	public void deleteCart(String id);

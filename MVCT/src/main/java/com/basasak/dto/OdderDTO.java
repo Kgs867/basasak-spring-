@@ -3,8 +3,18 @@ package com.basasak.dto;
 import java.sql.Date;
 
 public class OdderDTO {
-	private String o_num,o_product,o_state,o_addr,m_id,c_serial;
+	private String o_num,o_product,o_state,o_addr,m_id,c_serial,c_img1;
+	private Date o_date;
 	private int o_price,o_point,o_count;
+	
+	
+	public String getC_img1() {
+		return c_img1;
+	}
+	public void setC_img1(String c_img1) {
+		this.c_img1 = c_img1;
+	}
+	
 	public int getO_count() {
 		return o_count;
 	}
@@ -65,5 +75,11 @@ public class OdderDTO {
 	}
 	public void setDate(Date date) {
 		this.date = date;
+	}
+	public Date getO_date() {
+		return o_date;
+	}
+	public void setO_date(Date o_date) {
+		this.o_date = o_date;
 	}
 }

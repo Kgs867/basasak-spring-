@@ -69,12 +69,14 @@ public class CookieActionImpl extends SqlSessionDaoSupport implements CookieActi
 	
 	public int odderMax(String id) {
 		int omax=0;
-		omax=getSqlSession().selectOne("Cart.OMax",id);
+
 		System.out.println("odderMax"+id);
-		if (omax==0) {
-			omax=1;
+		if (getSqlSession().selectOne("Cart.OMax",id)==null) {
+			return omax=1;
+		}else {
+			return omax=getSqlSession().selectOne("Cart.OMax",id);
 		}
-		return omax;
+	
 		
 	}
 	public void addOdder(List<CartDTO> cart,String id,String addr) {
@@ -123,5 +125,10 @@ public class CookieActionImpl extends SqlSessionDaoSupport implements CookieActi
 			return getSqlSession().selectOne("Cart.CCount",id);
 		}
 		
+	}
+	@Override
+	public List<OdderDTO> odderList(String id) {
+		
+		return getSqlSession().selectList("Cart.OList",id);
 	}
 }

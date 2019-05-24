@@ -7,7 +7,7 @@
 <body>
 <div>
 	<a href="memberedit.do">회원정보 수정</a>
-	<a href="#">구매내역</a>
+	<a href="listOdder.do">구매내역</a>
 </div>
 </body>
 </html>

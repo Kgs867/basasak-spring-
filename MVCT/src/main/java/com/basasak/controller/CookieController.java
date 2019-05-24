@@ -1,6 +1,7 @@
 package com.basasak.controller;
 
 
+import java.nio.channels.SeekableByteChannel;
 import java.text.DateFormat;
 import java.util.Collections;
 import java.util.Date;
@@ -50,23 +51,23 @@ public class CookieController {
 		map.put("keyField", keyField);
 		map.put("keyWord", keyWord);
 		
-		//�ѷ��ڵ�� �Ǵ� �˻��� ���� �ѷ��ڵ��
+		//占싼뤄옙占쌘듸옙占� 占실댐옙 占싯삼옙占쏙옙 占쏙옙占쏙옙 占싼뤄옙占쌘듸옙占�
 		int count=action.cookieCount(map);
-		//����¡ ó��  1.���������� 2.�ѷ��ڵ�� 3.�������� �Խù��� 4.���� �������� 5.��û��ɾ�
+		//占쏙옙占쏙옙징 처占쏙옙  1.占쏙옙占쏙옙占쏙옙占쏙옙占쏙옙 2.占싼뤄옙占쌘듸옙占� 3.占쏙옙占쏙옙占쏙옙占쏙옙 占쌉시뱄옙占쏙옙 4.占쏙옙占쏙옙 占쏙옙占쏙옙占쏙옙占쏙옙 5.占쏙옙청占쏙옙占�
 		PagingUtil page=new PagingUtil(currentPage,count,9,5,"cookielist.do");
 		System.out.println(page.getStartCount());
-		//start=>�������� �� ù��° ������ �Խù� ��ȣ
+		//start=>占쏙옙占쏙옙占쏙옙占쏙옙 占쏙옙 첫占쏙옙째 占쏙옙占쏙옙占쏙옙 占쌉시뱄옙 占쏙옙호
 		map.put("start",page.getStartCount());//<->map.get("start")=>#{start}
 		map.put("end", page.getEndCount());
 		
 		List<CookieDTO> list=null;
 		if(count > 0) {
-			System.out.println("����� DAOȣ��");
+			System.out.println("占쏙옙占쏙옙占� DAO호占쏙옙");
 			list=action.cookieList(map);//keyField,keyWord,start,end
 		}else {
-			list=Collections.emptyList();//0 ����
+			list=Collections.emptyList();//0 占쏙옙占쏙옙
 		}
-		System.out.println("ListControllerŬ������ count=>"+count);
+		System.out.println("ListController클占쏙옙占쏙옙占쏙옙 count=>"+count);
 		
 		mav.addObject("articleList", list);
 		mav.addObject("pagingHtml",page.getPagingHtml());
@@ -131,6 +132,13 @@ public class CookieController {
 		String addr=zip+","+addr1+","+addr2;
 		List<CartDTO> odder= action.listCart((String)session.getAttribute("id"));
 		action.addOdder(odder,(String)session.getAttribute("id"),addr);
+		return mav;
+	}
+	@RequestMapping(value = "listOdder.do", method = RequestMethod.GET) 
+	public ModelAndView listOdder(HttpSession session) throws Exception{
+		ModelAndView mav=new ModelAndView("listOdder");
+		List<OdderDTO> list=action.odderList((String)session.getAttribute("id"));
+		mav.addObject("articleList", list);
 		return mav;
 	}
 	

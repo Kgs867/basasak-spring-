@@ -17,20 +17,20 @@
 	href="http://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500,600,700"
 	rel="stylesheet">
 
-<link rel="stylesheet" href="assets/css/plugins.min.css">
-<link rel="stylesheet" href="assets/css/style.css">
+<link rel="stylesheet" href="resources/assets/css/plugins.min.css">
+<link rel="stylesheet" href="resources/assets/css/style.css">
 <!-- basasak css 추가 -->
-<link rel="stylesheet" href="assets/css/basasak.css">
+<link rel="stylesheet" href="resources/assets/css/basasak.css">
 
 <!-- Favicon -->
-<link rel="icon" type="image/png" href="assets/images/icons/favicon.png">
+<link rel="icon" type="image/png" href="resources/assets/images/icons/favicon.png">
 <link rel="apple-touch-icon" sizes="57x57"
-	href="assets/images/icons/faviconx57.png">
+	href="resources/assets/images/icons/faviconx57.png">
 <link rel="apple-touch-icon" sizes="72x72"
-	href="assets/images/icons/faviconx72.png">
+	href="resources/assets/images/icons/faviconx72.png">
 
 <!-- Modernizr -->
-<script src="assets/js/modernizr.js"></script>
+<script src="resources/assets/js/modernizr.js"></script>
 </head>
 <body>
 	<div id="page-loader">
@@ -49,7 +49,7 @@
 
 		<div class="main">
 			<div class="page-header2 largest parallax custom text-center"
-				style="background-image: url(assets/images/eventpage1bg-color.png)"
+				style="background-image: url(resources/assets/images/eventpage1bg-color.png)"
 				data-0="background-position:50% 50%;"
 				data-top-bottom="background-position:50% 100%">
 				<div class="container-fluid">
@@ -78,20 +78,20 @@
 											<ul style="list-style-type: none;">
 												<li class="info-hover-li"><a href="eventpage1.do">신규가입
 														<img class="info-hover-img"
-														src="resources/assets/images/blog/신규가입호버.png" alt="비스켓" />
+														src="resources/resources/assets/images/blog/신규가입호버.png" alt="비스켓" />
 												</a></li>
 												<li class="info-hover-li2"><a
 													href="eventpage2.do"> 적립금<img
-														class="info-hover-img2" src="resources/assets/images/blog/적립금호버.png"
+														class="info-hover-img2" src="resources/resources/assets/images/blog/적립금호버.png"
 														alt="스낵" />
 												</a></li>
 												<li class="info-hover-li3"><a
 													href="eventpage3.do">배송비무료 <img
-														class="info-hover-img3" src="resources/assets/images/blog/배송비무료호버.png"
+														class="info-hover-img3" src="resources/resources/assets/images/blog/배송비무료호버.png"
 														alt="초코" />
 												</a></li>
 												<li class="info-hover-li4"><a href="eventpage4.do">리뷰 <img
-														class="info-hover-img4" src="resources/assets/images/blog/리뷰호버.png"
+														class="info-hover-img4" src="resources/resources/assets/images/blog/리뷰호버.png"
 														alt="초코" />
 												</a></li>
 											</ul>
@@ -102,37 +102,37 @@
 												<li class="first"><a
 													href="http://www.ht.co.kr/product/list"
 													style="text-decoration: none;"> <img
-														src="assets/images/blog/해태로고.png" alt="해태제과"
+														src="resources/assets/images/blog/해태로고.png" alt="해태제과"
 														style="outline: none;">
 												</a></li>
 												<li class="first"><a
 													href="http://www.ht.co.kr/product/list"
 													style="outline: none;"> <img
-														src="assets/images/blog/빙그레로고.png" alt="빙그레"
+														src="resources/assets/images/blog/빙그레로고.png" alt="빙그레"
 														style="outline: none;">
 												</a></li>
 												<li class="first"><a
 													href="http://www.ht.co.kr/product/list"
 													style="outline: none;"> <img
-														src="assets/images/blog/오리온로고.png" alt="오리온"
+														src="resources/assets/images/blog/오리온로고.png" alt="오리온"
 														style="outline: none;">
 												</a></li>
 												<li class="first"><a
 													href="http://www.ht.co.kr/product/list"
 													style="outline: none;"> <img
-														src="assets/images/blog/롯데로고.png" alt="롯데"
+														src="resources/assets/images/blog/롯데로고.png" alt="롯데"
 														style="outline: none;">
 												</a></li>
 												<li class="first"><a
 													href="http://www.ht.co.kr/product/list"
 													style="outline: none;"> <img
-														src="assets/images/blog/농심로고.png" alt="농심"
+														src="resources/assets/images/blog/농심로고.png" alt="농심"
 														style="outline: none;">
 												</a></li>
 												<li class="first"><a
 													href="http://www.ht.co.kr/product/list"
 													style="outline: none;" target="_blank"> <img
-														src="assets/images/blog/노브랜드로고.png" alt="노브랜드"
+														src="resources/assets/images/blog/노브랜드로고.png" alt="노브랜드"
 														style="outline: none;">
 												</a></li>
 											</ul>
@@ -147,7 +147,7 @@
 						
 						<div class="products-container max-col-3">
 							<div class="row">
-								<img src="assets/images/blog/이벤트페이지1.png" alt="이벤트페이지1" style="outline:none;">
+								<img src="resources/assets/images/blog/이벤트페이지1.png" alt="이벤트페이지1" style="outline:none;">
 								
 							</div>
 							<!-- end .row -->
@@ -219,8 +219,8 @@
 		class="fa fa-angle-up"></i></a>
 
 	<!-- End -->
-	<script src="assets/js/plugins.min.js"></script>
-	<script src="assets/js/main.js"></script>
+	<script src="resources/assets/js/plugins.min.js"></script>
+	<script src="resources/assets/js/main.js"></script>
 </body>
 </html>
 

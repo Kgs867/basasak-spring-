@@ -20,6 +20,8 @@ public interface CookieService {
 	
 	public void addCart(String id,CartDTO c_cerial);
 	
+	public List<OdderDTO> odderList(String id);
+	
 	public int odderMax(String id);
 	
 	public void addOdder(List<CartDTO> cart,String id,String addr);

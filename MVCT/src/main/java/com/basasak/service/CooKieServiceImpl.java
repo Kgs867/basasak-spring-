@@ -66,4 +66,10 @@ public class CooKieServiceImpl implements CookieService {
 		return cookie.cartCount(id);
 	}
 
+	@Override
+	public List<OdderDTO> odderList(String id) {
+		// TODO Auto-generated method stub
+		return cookie.odderList(id);
+	}
+
 }

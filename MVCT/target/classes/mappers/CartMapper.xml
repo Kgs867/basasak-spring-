@@ -24,6 +24,9 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 	<insert id="OAdd" parameterType="odderDTO">
 		insert into odder values(#{o_num},#{o_product},#{o_count},#{o_price},#{o_point},"배송중",#{o_addr},now(),#{m_id},#{c_serial})
 	</insert>
+	<select id="OList" parameterType="string" resultType="odderDTO">
+		select odder.*,cookie.c_img1 from odder,cookie where odder.m_id=#{id} and odder.c_serial=cookie.c_serial
+	</select>
 	<delete id="CDelete" parameterType="string">
 		delete from shopb where m_id=#{id}
 	</delete>
