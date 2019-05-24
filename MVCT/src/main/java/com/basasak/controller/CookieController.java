@@ -50,23 +50,23 @@ public class CookieController {
 		map.put("keyField", keyField);
 		map.put("keyWord", keyWord);
 		
-		//ÃÑ·¹ÄÚµå¼ö ¶Ç´Â °Ë»öµÈ ±ÛÀÇ ÃÑ·¹ÄÚµå¼ö
+		//ï¿½Ñ·ï¿½ï¿½Úµï¿½ï¿½ ï¿½Ç´ï¿½ ï¿½Ë»ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ñ·ï¿½ï¿½Úµï¿½ï¿½
 		int count=action.cookieCount(map);
-		//ÆäÀÌÂ¡ Ã³¸®  1.ÇöÀçÆäÀÌÁö 2.ÃÑ·¹ÄÚµå¼ö 3.ÆäÀÌÁö´ç °Ô½Ã¹°¼ö 4.ºí·°´ç ÆäÀÌÁö¼ö 5.¿äÃ»¸í·É¾î
+		//ï¿½ï¿½ï¿½ï¿½Â¡ Ã³ï¿½ï¿½  1.ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 2.ï¿½Ñ·ï¿½ï¿½Úµï¿½ï¿½ 3.ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ô½Ã¹ï¿½ï¿½ï¿½ 4.ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 5.ï¿½ï¿½Ã»ï¿½ï¿½É¾ï¿½
 		PagingUtil page=new PagingUtil(currentPage,count,9,5,"cookielist.do");
 		System.out.println(page.getStartCount());
-		//start=>ÆäÀÌÁö´ç ¸Ç Ã¹¹øÂ° ³ª¿À´Â °Ô½Ã¹° ¹øÈ£
+		//start=>ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ Ã¹ï¿½ï¿½Â° ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ô½Ã¹ï¿½ ï¿½ï¿½È£
 		map.put("start",page.getStartCount());//<->map.get("start")=>#{start}
 		map.put("end", page.getEndCount());
 		
 		List<CookieDTO> list=null;
 		if(count > 0) {
-			System.out.println("¿©±â´Â DAOÈ£Ãâ");
+			System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ DAOÈ£ï¿½ï¿½");
 			list=action.cookieList(map);//keyField,keyWord,start,end
 		}else {
-			list=Collections.emptyList();//0 Àû¿ë
+			list=Collections.emptyList();//0 ï¿½ï¿½ï¿½ï¿½
 		}
-		System.out.println("ListControllerÅ¬·¡½ºÀÇ count=>"+count);
+		System.out.println("ListControllerÅ¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ count=>"+count);
 		
 		mav.addObject("articleList", list);
 		mav.addObject("pagingHtml",page.getPagingHtml());
@@ -131,6 +131,27 @@ public class CookieController {
 		String addr=zip+","+addr1+","+addr2;
 		List<CartDTO> odder= action.listCart((String)session.getAttribute("id"));
 		action.addOdder(odder,(String)session.getAttribute("id"),addr);
+		return mav;
+	}
+	
+	@RequestMapping(value = "eventpage1.do", method = RequestMethod.GET) 
+	public ModelAndView event1(HttpSession session) throws Exception{
+		ModelAndView mav=new ModelAndView("eventpage1");
+		return mav;
+	}
+	@RequestMapping(value = "eventpage2.do", method = RequestMethod.GET) 
+	public ModelAndView event2(HttpSession session) throws Exception{
+		ModelAndView mav=new ModelAndView("eventpage2");
+		return mav;
+	}
+	@RequestMapping(value = "eventpage3.do", method = RequestMethod.GET) 
+	public ModelAndView event3(HttpSession session) throws Exception{
+		ModelAndView mav=new ModelAndView("eventpage3");
+		return mav;
+	}
+	@RequestMapping(value = "eventpage4.do", method = RequestMethod.GET) 
+	public ModelAndView event4(HttpSession session) throws Exception{
+		ModelAndView mav=new ModelAndView("eventpage4");
 		return mav;
 	}
 	

@@ -38,14 +38,14 @@ public class LoginController {
 	@RequestMapping(value = "login.do", method = RequestMethod.GET)
 	public ModelAndView form() {
 		ModelAndView mav=new ModelAndView("login");
-		System.out.println("login ½ÇÇà");
+		System.out.println("login ï¿½ï¿½ï¿½ï¿½");
 		return mav;
 
 	}
 	
 	@RequestMapping(value = "login.do", method = RequestMethod.POST)
 	public ModelAndView login(@ModelAttribute("login") LoginDTO login, HttpSession session) throws Exception {
-		System.out.println("login do ½ÇÇà");
+		System.out.println("login do ï¿½ï¿½ï¿½ï¿½");
 		System.out.println(login.getM_id());
 		System.out.println("logincontroll =>"+mlogin);
 		mlogin=service.login(login);
@@ -65,7 +65,7 @@ public class LoginController {
 	}
 	@RequestMapping(value = "logout.do", method = RequestMethod.GET)
 	public ModelAndView logout(HttpSession session) {
-		System.out.println("logout.do ½ÇÇà");
+		System.out.println("logout.do ï¿½ï¿½ï¿½ï¿½");
 		session.invalidate();
 		ModelAndView mav=new ModelAndView("index");
 		return mav;
