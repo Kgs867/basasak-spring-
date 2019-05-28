@@ -9,8 +9,8 @@
 %>
 
 	<%
-		String driver = "com.mysql.jdbc.Driver"; //대소문자 기억! 
-		Class.forName(driver); //클래스명을 집어넣어주면 자동으로 객체를 만들어주는 함수. 
+		String driver = "com.mysql.jdbc.Driver";
+		Class.forName(driver); //클래스명을 집어넣어주면 자동으로 객체를 만들어주는 함수
 		String url = "jdbc:mysql://localhost:3306/basasak?useUnicode=true&characterEncoding=UTF-8"; //sql의 포트번호와 SID적기 
 		String userName = "root";
 		String passWord = "1234";
@@ -19,7 +19,6 @@
 		String sql=null;
 		try {
 			sql="update review set r_recommend=? where r_num=?";
-			
 
 			pstmt = con.prepareStatement(sql);
 			int r_num = Integer.parseInt(request.getParameter("r_num"));

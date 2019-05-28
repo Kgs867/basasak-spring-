@@ -1,30 +1,3 @@
-<%-- <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>게시판</title>
-<link href="style.css" rel="stylesheet" type="text/css">
-
-<script language="JavaScript">      
-  function deleteSave(){	
-	if(document.delForm.passwd.value==''){
-	  alert("비밀번호를 입력하십시오.");
-	  document.delForm.passwd.focus();
-	  return false;
- 	}
-	// document.delForm.submit() => 링크문자열 또는 input type="button"
-  }
-</script>
-</head>
-
-<body bgcolor="#e0ffff">
- --%>
-
-
-
-
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
@@ -53,21 +26,6 @@
 
         <!-- Modernizr -->
         <script src="resources/assets/js/modernizr.js"></script>
-        
-        
-        
-        <!-- <script language="JavaScript">      
-  			function deleteSave(){	
-				if(document.delForm.n_pw.value==''){
-	  				alert("비밀번호를 입력하십시오.");
-	  				document.delForm.n_pw.focus();
-	  				return false;
- 				}
-  			}
-		</script> -->
-		
-		
-		
     </head>
     <body>
         <div id="page-loader">
@@ -80,7 +38,6 @@
         <div id="wrapper">
            <c:import url="header.jsp"></c:import>
                 
-            
             <div class="main">
                 <div class="page-header largest parallax custom text-center" style="background-image:url(resources/assets/images/page-header-bg.jpg)" data-0="background-position:50% 50%;" data-top-bottom="background-position:50% 100%">
                     <div class="container-fluid">
@@ -93,49 +50,37 @@
                     </div><!-- End .container -->
                 </div><!-- End .page-header -->
 
+			<center><b>글삭제</b>
+			<br>
+			<form method="POST" name="delForm"  action="deleteNoticePro.do" 
+   				onsubmit="return deleteSave()"> 
+ 			<table border="1" align="center" cellspacing="0" cellpadding="0" width="360">
+				<tr height="30">
+					<td align=center  bgcolor="#b0e0e6">
+						<b>비밀번호를 입력해주세요.</b>
+					</td>
+				</tr>
+  				<tr height="30">
+     				<td align=center >비밀번호 :   
+       					<input type="password" name="n_pw" size="8" maxlength="12">
+	   					<input type="hidden" name="n_num" value="${article.n_num }">
+	   					<input type="hidden" name="pageNum" value="${pageNum}">
+	 				</td>
+ 				</tr>
+ 				<tr height="30">
+    				<td align=center bgcolor="#b0e0e6">
+      					<input type="submit" value="글삭제" >
+      					<input type="button" value="글목록" 
+       						onclick="document.location.href='notice.do?pageNum=${pageNum}'">
+   					</td>
+ 				</tr>  
+			</table> 
+		</form>
 
+		</div><!-- End .container -->
+   		<div class="mb80"></div><!-- margin -->
+		</div><!-- End .main -->
 
-
-
-
-<center><b>글삭제</b>
-<br>
-<form method="POST" name="delForm"  action="deleteNoticePro.do" 
-   onsubmit="return deleteSave()"> 
- <table border="1" align="center" cellspacing="0" cellpadding="0" width="360">
-  <tr height="30">
-     <td align=center  bgcolor="#b0e0e6">
-       <b>비밀번호를 입력해주세요.</b></td>
-  </tr>
-  <tr height="30">
-     <td align=center >비밀번호 :   
-       <input type="password" name="n_pw" size="8" maxlength="12">
-	   <input type="hidden" name="n_num" value="${article.n_num }">
-	   <input type="hidden" name="pageNum" value="${pageNum}">
-	 </td>
- </tr>
- <tr height="30">
-    <td align=center bgcolor="#b0e0e6">
-      <input type="submit" value="글삭제" >
-      <input type="button" value="글목록" 
-       onclick="document.location.href='notice.do'">
-   </td>
- </tr>  
-</table> 
-</form>
-
-
-
-
-</div><!-- End .container -->
-                <div class="mb80"></div><!-- margin -->
-            </div><!-- End .main -->
-
-
-
-
-
-<!--  -->
             <footer class="footer">
                 <div class="container-fluid">
                     <div class="row">
@@ -283,10 +228,3 @@
 
     </body>
 </html>
-
-
-
-
-<!-- 
-</body>
-</html>  -->

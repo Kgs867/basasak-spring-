@@ -9,7 +9,7 @@
 %>
 
 	<%
-		String driver = "com.mysql.jdbc.Driver"; //대소문자 기억! 
+		String driver = "com.mysql.jdbc.Driver";
 		Class.forName(driver); //클래스명을 집어넣어주면 자동으로 객체를 만들어주는 함수. 
 		String url = "jdbc:mysql://localhost:3306/basasak?useUnicode=true&characterEncoding=UTF-8"; //sql의 포트번호와 SID적기 
 		String userName = "root";
@@ -36,5 +36,4 @@
 			con.close();
 			pstmt.close();
 			rs.close();
-		
 	%>

@@ -67,12 +67,6 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		delete from notice where n_num=#{n_num} and n_pw=#{n_pw}
 	</delete>
 	
-	
-	<!-- <insert id="CAdd">
-		insert into shopb()
-	</insert> -->
-	
-
 </mapper>
 
 	

@@ -26,15 +26,6 @@
 
         <!-- Modernizr -->
         <script src="resources/assets/js/modernizr.js"></script>
-        <!-- <script language="JavaScript">      
-  			function deleteSave(){	
-				if(document.delForm.r_pw.value==''){
-	  				alert("비밀번호를 입력하십시오.");
-	  				document.delForm.r_pw.focus();
-	  				return false;
- 				}
-  			}
-		</script> -->
     </head>
     <body>
         <div id="page-loader">
@@ -46,8 +37,7 @@
         
         <div id="wrapper">
            <c:import url="header.jsp"></c:import>
-                
-            
+              
             <div class="main">
                 <div class="page-header largest parallax custom text-center" style="background-image:url(resources/assets/images/page-header-bg.jpg)" data-0="background-position:50% 50%;" data-top-bottom="background-position:50% 100%">
                     <div class="container-fluid">
@@ -59,15 +49,6 @@
                         </ol>
                     </div><!-- End .container -->
                 </div><!-- End .page-header -->
-
-
-
-
-
-
-
-
-
 
 				<center>
 					<b>글삭제</b> <br>
@@ -88,27 +69,16 @@
 							<tr height="30">
 								<td align=center bgcolor="yellow"><input type="submit"
 									value="글삭제"> <input type="button" value="글목록"
-									onclick="document.location.href='review.do'">
+									onclick="document.location.href='review.do?pageNum=${pageNum}'">
 								</td>
 							</tr>
 						</table>
 					</form>
 				</center>
-
-
-
-
-
-
 			</div><!-- End .container -->
                 <div class="mb80"></div><!-- margin -->
             </div><!-- End .main -->
 
-
-
-
-
-<!--  -->
             <footer class="footer">
                 <div class="container-fluid">
                     <div class="row">
@@ -256,10 +226,3 @@
 
     </body>
 </html>
-
-
-
-
-<!-- 
-</body>
-</html>  -->

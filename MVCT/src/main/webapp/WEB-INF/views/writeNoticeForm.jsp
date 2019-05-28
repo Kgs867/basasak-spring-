@@ -1,22 +1,3 @@
-<%-- 
-<%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>게시판</title>
-<link href="style.css" rel="stylesheet" type="text/css">
-<script language="JavaScript" src="script.js"></script>
-</head>
-<%
-	//int num = (Integer)request.getAttribute("num"); // Object -> Integer -> int ==> ${num}으로 대신하면 편리함
-%>
-<body bgcolor="#e0ffff">  
- --%>
-
-
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
@@ -57,7 +38,6 @@
         <div id="wrapper">
            <c:import url="header.jsp"></c:import>
                 
-            
             <div class="main">
                 <div class="page-header largest parallax custom text-center" style="background-image:url(resources/assets/images/page-header-bg.jpg)" data-0="background-position:50% 50%;" data-top-bottom="background-position:50% 100%">
                     <div class="container-fluid">
@@ -69,11 +49,6 @@
                         </ol>
                     </div><!-- End .container -->
                 </div><!-- End .page-header -->
-
-
-
-
-
 
                 <div class="container-fluid">
                     <div class="row">
@@ -92,10 +67,6 @@
                                     </div><!-- End .col-md-6 -->
                                 </div><!-- End .row -->
                                 <div class="row">
-                                    <!-- <div class="col-md-6">
-                                        <label>Website</label>
-                                        <input type="url" class="form-control" id="contactwebsite" name="contactwebsite" placeholder="Website" required>
-                                    </div> --><!-- End .col-md-6 -->
                                     <div class="col-md-12">
                                         <label>제목</label>
                                         <input type="text" class="form-control" id="contactsubject" name="n_title">
@@ -122,15 +93,8 @@
                 </div><!-- End .container-fluid -->
 
                 <div class="mb50"></div><!-- margin -->
-
-              <!--   <div id="map"></div> --><!-- End #map -->
             </div><!-- End .main -->
 
-
-
-
-
-<!--  -->
             <footer class="footer">
                 <div class="container-fluid">
                     <div class="row">
@@ -278,13 +242,3 @@
 
     </body>
 </html>
-
-
-
-
-
-
-<!-- 
-</body>
-</html>
- -->

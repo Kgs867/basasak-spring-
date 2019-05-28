@@ -123,9 +123,10 @@ public class ReviewController {
 	}
 	
 	@RequestMapping(value = "updateForm.do", method = RequestMethod.GET) 
-	public ModelAndView updateFrom(@RequestParam(value="r_num") int r_num) throws Exception{
+	public ModelAndView updateFrom(@RequestParam(value="r_num") int r_num,@RequestParam(value="pageNum") int currentPage) throws Exception{
 		ModelAndView mav=new ModelAndView("updateForm");
 		BoardDTO updateForm=action.updateForm(r_num);
+		mav.addObject("pageNum", currentPage);
 		mav.addObject("article",updateForm);
 		return mav;
 	}
@@ -142,9 +143,10 @@ public class ReviewController {
 	}
 	
 	@RequestMapping(value = "deleteForm.do", method = RequestMethod.GET) 
-	public ModelAndView deleteFrom(@RequestParam(value="r_num") int r_num) throws Exception{
+	public ModelAndView deleteFrom(@RequestParam(value="r_num") int r_num,@RequestParam(value="pageNum") int currentPage) throws Exception{
 		ModelAndView mav=new ModelAndView("deleteForm");
 		BoardDTO deleteForm=action.deleteForm(r_num);
+		mav.addObject("pageNum", currentPage);
 		mav.addObject("article",deleteForm);
 		return mav;
 	}
@@ -159,17 +161,6 @@ public class ReviewController {
 		System.out.println("#########################"+action.reviewDelete(boardDTO));
 		return mav;
 	}
-	
-	
-	
-//	@RequestMapping(value = "cartView.do", method = RequestMethod.GET) 
-//	public ModelAndView CartView(@RequestParam("id") String id) throws Exception{
-//		ModelAndView mav=new ModelAndView("cartView");
-//		System.out.println(id);
-//		List<CartDTO> list=action.CartView(id);
-//		mav.addObject("article", list);
-//		return mav;
-//	}
 	
 }
  

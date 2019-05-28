@@ -19,7 +19,7 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 				r_title like CONCAT('%',#{keyWord},'%') or
 				r_content like CONCAT('%',#{keyWord},'%')
 			</if>
-		</where>       
+		</where>
                      order by r_num desc)a,(select @RNUM:=0)R)c
   <![CDATA[
     where rnum >=#{start} AND rnum <=#{end}
@@ -67,12 +67,6 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 		delete from review where r_num=#{r_num} and r_pw=#{r_pw}
 	</delete>
 	
-	
-	<!-- <insert id="CAdd">
-		insert into shopb()
-	</insert> -->
-	
-
 </mapper>
 
 	

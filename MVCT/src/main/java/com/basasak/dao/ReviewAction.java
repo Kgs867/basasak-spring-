@@ -16,10 +16,4 @@ public interface ReviewAction {
 	public int reviewUpdate(BoardDTO boardDTO) throws Exception;
 	public BoardDTO deleteForm(int r_num) throws Exception;
 	public int reviewDelete(BoardDTO boardDTO) throws Exception;
-	
-	/*
-	 * public int cartMax(String id);
-	 * 
-	 * public List<CartDTO> CartView(String id);
-	 */
 }

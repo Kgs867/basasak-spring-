@@ -18,9 +18,4 @@ public interface NoticeService {
 	public int noticeUpdate(BoardNoticeDTO boardNoticeDTO) throws Exception;
 	public BoardNoticeDTO deleteNoticeForm(int n_num) throws Exception;
 	public int noticeDelete(BoardNoticeDTO boardNoticeDTO) throws Exception;
-	/*
-	 * public int cartMax(String id);
-	 * 
-	 * public List<CartDTO> CartView(String id);
-	 */
 }

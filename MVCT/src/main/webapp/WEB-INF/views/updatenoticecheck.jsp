@@ -12,10 +12,10 @@ public void delay() throws Exception{
 	System.out.println(request.getAttribute("done") + "," + request.getParameter("n_num"));
 	int done = (Integer)request.getAttribute("done");
 	String n_num= request.getParameter("n_num");
-	
+	String pageNum= request.getParameter("pageNum");
 	if (done == 1) {
-		out.println("<script> alert('수정완료'); location.href='noticecontent.do?n_num="+n_num+"';</script>");
+		out.println("<script> alert('수정완료'); location.href='noticecontent.do?n_num="+n_num+"&pageNum="+pageNum+"';</script>");
 	} else {
-		out.println("<script> alert('수정실패 비밀번호 확인'); location.href='noticecontent.do?n_num="+n_num+"';</script>");
+		out.println("<script> alert('수정실패 비밀번호 확인'); location.href='updateNoticeForm.do?n_num="+n_num+"&pageNum="+pageNum+"';</script>");
 	}
 %>

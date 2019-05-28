@@ -1,18 +1,3 @@
-<%-- <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>내용 확인</title>
-<link href="style.css" rel="stylesheet" type="text/css">
-</head>
-
-<body bgcolor="#e0ffff">  
- --%>
-
-
-
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
@@ -65,31 +50,16 @@
                         </ol>
                     </div><!-- End .container -->
                 </div><!-- End .page-header -->
-                
-                
-                
-                
-                
+
                 <div class="mb80"></div><!-- margin -->
                 <div class="container-fluid">
 					<article class="entry">
-                         <%--<div class="entry-media">
-                            <figure>
-                                <img src="resources/assets/images/blog/post1.jpg" alt="entry image">
-                            </figure>
-                        </div><!-- End .enty-media -->
-
-                        <div class="entry-icon">
-                            <i class="fa fa-file-image-o"></i>
-                        </div><!-- End .entry-icon --> --%>
-
-
                         <div class="entry-content-container" height="500">
                             <div class="entry-meta">
                                 <div><i class="fa fa-calendar"></i>${article.n_date}</div>
                                 <div><a href="#"><i class="fa fa-comments"></i>${article.n_num}</a></div>
                                 <div><a href="#"><i class="fa fa-eye"></i>${article.n_view}</a></div>
-                                <div><a href="#"><i class="fa fa-user"></i> ${article.a_id}</a></div>
+                                <div><a href="#"><i class="fa fa-user"></i>관리자</a></div>
                             </div><!-- End .entry-meta -->
                             
                             <div class="entry-content-wrapper">
@@ -105,22 +75,12 @@
        onclick="document.location.href='deleteNoticeForm.do?n_num=${article.n_num}&pageNum=${pageNum}'">
 	   &nbsp;&nbsp;&nbsp;&nbsp; 
        <input type="button" value="글목록" 
-       onclick="document.location.href='notice.do'">
+       onclick="document.location.href='notice.do?pageNum=${pageNum}'">
                         </div>
                         </article>
-                    
-
-
-
-
 </div><!-- End .container -->
             </div><!-- End .main -->
 
-
-
-
-
-<!--  -->
             <footer class="footer">
                 <div class="container-fluid">
                     <div class="row">
@@ -268,8 +228,3 @@
 
     </body>
 </html>
-
-
-<!-- 
-</body>
-</html> -->

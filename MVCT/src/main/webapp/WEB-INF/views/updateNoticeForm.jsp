@@ -1,19 +1,3 @@
-<%-- <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>글수정하기</title>
-<link href="style.css" rel="stylesheet" type="text/css">
-<script language="JavaScript" src="script.js"></script>
-</head>
-
-<body bgcolor="#e0ffff">  
-
- --%>
-
-
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
@@ -54,7 +38,6 @@
         <div id="wrapper">
            <c:import url="header.jsp"></c:import>
                 
-            
             <div class="main">
                 <div class="page-header largest parallax custom text-center" style="background-image:url(resources/assets/images/page-header-bg.jpg)" data-0="background-position:50% 50%;" data-top-bottom="background-position:50% 100%">
                     <div class="container-fluid">
@@ -67,10 +50,6 @@
                     </div><!-- End .container -->
                 </div><!-- End .page-header -->
 
-
-
-
-
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-md-8 col-sm-6">
@@ -80,7 +59,7 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <label>이 름</label>
-                                        <input type="text" class="form-control" id="contactname" name="a_id" value="${article.a_id}" required>
+                                        <input type="text" class="form-control" id="contactname" name="a_id" value="${id}" readonly>
                                     </div><!-- End .col-md-6 -->
                                     <div class="col-md-6">
                                         <label>비밀번호</label>
@@ -88,10 +67,6 @@
                                     </div><!-- End .col-md-6 -->
                                 </div><!-- End .row -->
                                 <div class="row">
-                                    <!-- <div class="col-md-6">
-                                        <label>Website</label>
-                                        <input type="url" class="form-control" id="contactwebsite" name="contactwebsite" placeholder="Website" required>
-                                    </div> --><!-- End .col-md-6 -->
                                     <div class="col-md-12">
                                         <label>제목</label>
                                         <input type="text" class="form-control" id="contactsubject" name="n_title" value="${article.n_title}">
@@ -109,7 +84,7 @@
 
                                 <input type="submit" class="btn btn-custom min-width" data-loading-text="Sending Message..." value="글수정">
                                 <input type="reset" class="btn btn-custom min-width" value="다시작성">
-                                <input type="button" class="btn btn-custom min-width" value="목록보기" onclick="document.location.href='notice.do'">
+                                <input type="button" class="btn btn-custom min-width" value="목록보기" onclick="document.location.href='notice.do?pageNum=${pageNum}'">
                             </form>
                         </div><!-- End .col-md-8 -->
 
@@ -118,15 +93,8 @@
                 </div><!-- End .container-fluid -->
 
                 <div class="mb50"></div><!-- margin -->
-
-              <!--   <div id="map"></div> --><!-- End #map -->
             </div><!-- End .main -->
 
-
-
-
-
-<!--  -->
             <footer class="footer">
                 <div class="container-fluid">
                     <div class="row">
@@ -274,11 +242,3 @@
 
     </body>
 </html>
-
-
-
-
-
-<!-- 
-</body>
-</html> -->

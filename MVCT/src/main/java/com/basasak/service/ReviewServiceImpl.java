@@ -68,19 +68,5 @@ public class ReviewServiceImpl implements ReviewService {
 		// TODO Auto-generated method stub
 		return review.reviewDelete(boardDTO);
 	}
-	
-	
-//	@Override
-//	public int cartMax(String id) {
-//		System.out.println("cart service 실행 cartMax");
-//		return cookie.cartMax(id);
-//	}
-//	@Override
-//	public List<CartDTO> CartView(String id) {
-//		System.out.println("Cart Service view 실행");
-//		return cookie.CartView(id);
-//	}
-	
-	
-	
+
 }

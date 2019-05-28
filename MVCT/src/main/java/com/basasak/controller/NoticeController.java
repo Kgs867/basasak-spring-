@@ -45,13 +45,19 @@ public class NoticeController {
 		System.out.println(keyWord+"#################"+keyField);
 		ModelAndView mav=new ModelAndView("notice");
 		Map<String,Object> map=new HashMap<String,Object>();
+		
 		map.put("keyField", keyField);
 		map.put("keyWord", keyWord);
 		
+		int count;
 		//총레코드수 또는 검색된 글의 총레코드수
-		int count=action.noticeCount(map);
+		if (action.noticeCount(map)!=0) {
+			count=action.noticeCount(map);
+		}else {
+			count=1;
+		}
 		
-		PagingUtil page=new PagingUtil(currentPage,count,3,3,"notice.do");
+		PagingUtil page=new PagingUtil(currentPage,count,10,10,"notice.do");
 		System.out.println(page.getStartCount());
 		//start=>페이지당 맨 첫번째 나오는 게시물 번호
 		map.put("start",page.getStartCount());//<->map.get("start")=>#{start}
@@ -68,35 +74,23 @@ public class NoticeController {
 		System.out.println("ListController클래스의 count=>"+count);
 		
 		mav.addObject("articleList",list);
+		mav.addObject("pageNum", currentPage);
+		mav.addObject("count", count);
 		mav.addObject("pagingHtml",page.getPagingHtml());
 		
 		return mav;
 	}
 	
 	@RequestMapping(value = "noticecontent.do", method = RequestMethod.GET) 
-	public ModelAndView noticeContent(@RequestParam(value="n_num") int n_num) throws Exception{
+	public ModelAndView noticeContent(@RequestParam(value="n_num") int n_num,@RequestParam(value="pageNum",defaultValue="1") int currentPage) throws Exception{
 		ModelAndView mav=new ModelAndView("noticecontent");
 		action.nViewUpdate(n_num);
 		BoardNoticeDTO content=action.noticeContent(n_num);
-		
+		mav.addObject("pageNum", currentPage);
 		mav.addObject("article",content);
 		
 		return mav;
 	}
-	
-	/*@RequestMapping(value = "notice_recommend.do", method = RequestMethod.POST) 
-	@ResponseBody
-	public ModelAndView notice_recommend() throws Exception{
-		ModelAndView mav=new ModelAndView("notice_recommend");
-		return mav;
-	}
-	
-	@RequestMapping(value = "notice_recommend_update.do", method = RequestMethod.POST) 
-	@ResponseBody
-	public ModelAndView notice_recommend_update() throws Exception{
-		ModelAndView mav=new ModelAndView("notice_recommend_update");
-		return mav;
-	}*/
 	
 	@RequestMapping(value = "writeNoticeForm.do", method = RequestMethod.GET) 
 	public ModelAndView writeNoticeFrom(Locale locale, Model model) throws Exception{
@@ -117,9 +111,10 @@ public class NoticeController {
 	}
 	
 	@RequestMapping(value = "updateNoticeForm.do", method = RequestMethod.GET) 
-	public ModelAndView updateNoticeFrom(@RequestParam(value="n_num") int n_num) throws Exception{
+	public ModelAndView updateNoticeFrom(@RequestParam(value="n_num") int n_num,@RequestParam(value="pageNum") int currentPage) throws Exception{
 		ModelAndView mav=new ModelAndView("updateNoticeForm");
 		BoardNoticeDTO updateNoticeForm=action.updateNoticeForm(n_num);
+		mav.addObject("pageNum", currentPage);
 		mav.addObject("article",updateNoticeForm);
 		return mav;
 	}
@@ -136,9 +131,10 @@ public class NoticeController {
 	}
 	
 	@RequestMapping(value = "deleteNoticeForm.do", method = RequestMethod.GET) 
-	public ModelAndView deleteNoticeFrom(@RequestParam(value="n_num") int n_num) throws Exception{
+	public ModelAndView deleteNoticeFrom(@RequestParam(value="n_num") int n_num,@RequestParam(value="pageNum") int currentPage) throws Exception{
 		ModelAndView mav=new ModelAndView("deleteNoticeForm");
 		BoardNoticeDTO deleteNoticeForm=action.deleteNoticeForm(n_num);
+		mav.addObject("pageNum", currentPage);
 		mav.addObject("article",deleteNoticeForm);
 		return mav;
 	}
@@ -153,17 +149,6 @@ public class NoticeController {
 		System.out.println("#########################"+action.noticeDelete(boardNoticeDTO));
 		return mav;
 	}
-	
-	
-	
-//	@RequestMapping(value = "cartView.do", method = RequestMethod.GET) 
-//	public ModelAndView CartView(@RequestParam("id") String id) throws Exception{
-//		ModelAndView mav=new ModelAndView("cartView");
-//		System.out.println(id);
-//		List<CartDTO> list=action.CartView(id);
-//		mav.addObject("article", list);
-//		return mav;
-//	}
 	
 }
  
