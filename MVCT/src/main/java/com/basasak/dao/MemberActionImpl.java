@@ -28,6 +28,7 @@ public class MemberActionImpl extends SqlSessionDaoSupport implements MemberActi
 	public void register(MemberDTO member) {
 		getSqlSession().insert("Member.register",member);
 		getSqlSession().insert("Member.register2", member);
+		getSqlSession().insert("Member.register3",member);
 	}
 
 	@Override
