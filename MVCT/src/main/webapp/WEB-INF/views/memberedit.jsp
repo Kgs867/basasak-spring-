@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+ pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
@@ -33,6 +33,8 @@
                 <div class="sk-child sk-double-bounce2"></div><!-- End .sk-child -->
             </div><!-- End .sk-double-bounce -->
         </div><!-- End #page-loader -->
+        <jsp:include page="header.jsp"></jsp:include>
+       
         <form method="post" action="memberedit.do" >
         <div id="wrapper">
             <div class="container-fluid">
@@ -57,7 +59,7 @@
                             </div><!-- End .col-sm-6 -->
                         </div><!-- End .row -->
 
-						<div class="row">
+      <div class="row">
                             <div class="col-sm-6 ">
                                 <div class="form-group">
                                     <label>이름</label>
@@ -75,7 +77,7 @@
                             </div><!-- End .col-sm-6 -->
                         </div><!-- End .row -->
 
-						<div class="row">
+      <div class="row">
                             <div class="col-sm-6 ">
                                 <div class="form-group">
                                 <label>성별</label> <br>
@@ -136,7 +138,7 @@
             </div><!-- End .container-fluid -->
         </div><!-- End #wrapper -->
         <a id="scroll-top" href="#top" title="Scroll top"><i class="fa fa-angle-up"></i></a>
-		</form>
+  </form>
         <!-- End -->
         <script src="resources/assets/js/plugins.min.js"></script>
         <script src="resources/assets/js/main.js"></script>

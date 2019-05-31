@@ -61,8 +61,8 @@
 						<a href="register.do">회원가입</a>
 					</c:if>
 					<c:if test="${!empty id}">
-						<a href="mypage.do"><c:out value="${id}"></c:out> </a>
-						<a href="mypage.do">마이페이지</a>
+						<a href="memberedit.do"><c:out value="${id}"></c:out> </a>
+						<a href="listOdder.do">주문내역</a>
 						<a href="logout.do">로그아웃</a>
 					</c:if>
 					<div class="header-right header-cart-wrap">

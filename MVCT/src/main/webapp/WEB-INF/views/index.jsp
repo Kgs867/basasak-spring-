@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-	pageEncoding="UTF-8"%>
+ pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <!DOCTYPE html>
 <html>
@@ -13,45 +13,45 @@
 
 <!-- Google Fonts -->
 <link
-	href="http://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500,600,700"
-	rel="stylesheet">
+ href="http://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,500,600,700"
+ rel="stylesheet">
 
-<link rel="stylesheet" href="resources/assets/css/plugins.min.css">
-<link rel="stylesheet" href="resources/assets/css/settings.css">
-<link rel="stylesheet" href="resources/assets/css/layers.css">
-<link rel="stylesheet" href="resources/assets/css/navigation.css">
-<link rel="stylesheet" href="resources/assets/css/style.css">
+<link rel="stylesheet" href="/MVCT/resources/assets/css/plugins.min.css">
+<link rel="stylesheet" href="/MVCT/resources/assets/css/settings.css">
+<link rel="stylesheet" href="/MVCT/resources/assets/css/layers.css">
+<link rel="stylesheet" href="/MVCT/resources/assets/css/navigation.css">
+<link rel="stylesheet" href="/MVCT/resources/assets/css/style.css">
 
 <!-- basasak css 추가 -->
-<link rel="stylesheet" href="resources/assets/css/basasak.css">
+<link rel="stylesheet" href="/MVCT/resources/assets/css/basasak.css">
 
 <!-- Favicon -->
 <link rel="icon" type="image/png" href="resources/assets/images/icons/favicon.png">
 <link rel="apple-touch-icon" sizes="57x57"
-	href="resources/assets/images/icons/faviconx57.png">
+ href="resources/assets/images/icons/faviconx57.png">
 <link rel="apple-touch-icon" sizes="72x72"
-	href="resources/assets/images/icons/faviconx72.png">
+ href="resources/assets/images/icons/faviconx72.png">
 
 <!-- Modernizr -->
 <script src="resources/assets/js/modernizr.js"></script>
 <script type="text/javascript" src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
 </head>
 <body>
-	<div id="page-loader">
-		<div class="sk-double-bounce">
-			<div class="sk-child sk-double-bounce1"></div>
-			<!-- End .sk-child -->
-			<div class="sk-child sk-double-bounce2"></div>
-			<!-- End .sk-child -->
-		</div>
-		<!-- End .sk-double-bounce -->
-	</div>
-	<!-- End #page-loader -->
+ <div id="page-loader">
+  <div class="sk-double-bounce">
+   <div class="sk-child sk-double-bounce1"></div>
+   <!-- End .sk-child -->
+   <div class="sk-child sk-double-bounce2"></div>
+   <!-- End .sk-child -->
+  </div>
+  <!-- End .sk-double-bounce -->
+ </div>
+ <!-- End #page-loader -->
 
-	<div id="wrapper">
-		
-		<jsp:include page="header.jsp"></jsp:include>
-		<div class="main">
+ <div id="wrapper">
+  
+  <jsp:include page="header.jsp"></jsp:include>
+  <div class="main">
                 <div id="rev_slider_wrapper" class="slider-container rev_slider_wrapper rev_container_1 fullwidthbanner-container" data-alias="classicslider1">
                     <div id="rev_slider" class="rev_slider fullwidthabanner" style="display:none;" data-version="5.0.7">
                         <ul>
@@ -63,7 +63,7 @@
                                 <!-- LAYERS -->
 
                                 <!-- LAYER NR. 1 - overlay -->
-                                <div class="tp-caption tp-shape tp-shapewrapper rs-parallaxlevel-0" 
+                             <!--    <div class="tp-caption tp-shape tp-shapewrapper rs-parallaxlevel-0" 
                                     id="slide-1-layer-1" 
                                     data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
                                     data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" 
@@ -79,9 +79,9 @@
                                     data-responsive="off"
                                     style="z-index: 5; background-color: rgba(0,0,0, 0.5);"> 
                                 </div>
-
+ -->
                                 <!-- LAYER NR. 2 -->
-                                <div class="tp-caption tp-resizeme rs-parallaxlevel-0" 
+                          <!--       <div class="tp-caption tp-resizeme rs-parallaxlevel-0" 
                                     id="slide-1-layer-2" 
                                     data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
                                     data-y="['middle','middle','middle','middle']" data-voffset="['-80','-60','-50','-38']"
@@ -103,10 +103,10 @@
                                     data-responsive_offset="on" 
                                     data-elementdelay="0.1" 
                                     style="z-index: 5; white-space: nowrap;text-shadow:0 3px 8px rgba(0,0,0, 0.35);">Basasak!
-                                </div>
+                                </div> -->
 
                                 <!-- LAYER NR. 3 -->
-                                <div class="tp-caption tp-resizeme rs-parallaxlevel-0" 
+                              <!--   <div class="tp-caption tp-resizeme rs-parallaxlevel-0" 
                                     id="slide-1-layer-3" 
                                     data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
                                     data-y="['middle','middle','middle','middle']" data-voffset="['35','35','35','25']" 
@@ -128,10 +128,10 @@
                                     data-responsive_offset="on" 
                                     style="z-index: 6; white-space: nowrap;">
                                           <b style="font-size:20px">역대 이런 사이트는 없었다</b> <p>맛있는 소리 바사삭!</p>
-                                </div>
+                                </div> -->
 
                                 <!-- LAYER NR. 4 -->
-                                <a class="tp-caption btn btn-custom min-width tp-resizeme rs-parallaxlevel-0" 
+                              <!--   <a class="tp-caption btn btn-custom min-width tp-resizeme rs-parallaxlevel-0" 
                                     id="slide-1-layer-4" 
                                     data-x="['center','center','center','center']" data-hoffset="['-110','-100','-90','-80']" 
                                     data-y="['middle','middle','middle','middle']" data-voffset="['116','106','96','75']" 
@@ -149,10 +149,10 @@
                                     data-responsive_offset="on" 
                                     style="z-index: 6; white-space: nowrap;"
                                     href="#">자세히보기
-                                </a>
+                                </a> -->
 
                                  <!-- LAYER NR. 5 -->
-                                <a class="tp-caption btn btn-custom2 min-width tp-resizeme rs-parallaxlevel-0" 
+                      <!--           <a class="tp-caption btn btn-custom2 min-width tp-resizeme rs-parallaxlevel-0" 
                                     id="slide-1-layer-5" 
                                     data-x="['center','center','center','center']" data-hoffset="['110','100','90','80']" 
                                     data-y="['middle','middle','middle','middle']" data-voffset="['116','106','96','75']" 
@@ -170,7 +170,7 @@
                                     data-responsive_offset="on" 
                                     style="z-index: 6; white-space: nowrap;"
                                     href="#">Get in touch
-                                </a>
+                                </a> -->
                             </li>
                             <!-- SLIDE  -->
                             <li data-index="rs-2" data-transition="slideoverdown" data-slotamount="7" data-easein="Power4.easeInOut" data-easeout="Power4.easeInOut" data-masterspeed="1200" data-thumb="resources/assets/images/homepages/index/slide2-100x50.jpg" data-rotate="0" data-saveperformance="off" data-title="Purchase">
@@ -180,7 +180,7 @@
                                 <!-- LAYERS -->
 
                                 <!-- LAYER NR. 1 - overlay -->
-                                <div class="tp-caption tp-shape tp-shapewrapper rs-parallaxlevel-0" 
+                               <!--  <div class="tp-caption tp-shape tp-shapewrapper rs-parallaxlevel-0" 
                                     id="slide-2-layer-1" 
                                     data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
                                     data-y="['middle','middle','middle','middle']" data-voffset="['0','0','0','0']" 
@@ -195,10 +195,10 @@
                                     data-responsive_offset="on" 
                                     data-responsive="off"
                                     style="z-index: 5; background-color: rgba(0,0,0, 0.6);"> 
-                                </div>
+                                </div> -->
 
                                 <!-- LAYER NR. 2 -->
-                                <div class="tp-caption tp-resizeme rs-parallaxlevel-0" 
+                               <!--  <div class="tp-caption tp-resizeme rs-parallaxlevel-0" 
                                     id="slide-2-layer-2" 
                                     data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
                                     data-y="['middle','middle','middle','middle']" data-voffset="['-70','-60','-55','-44']" 
@@ -220,10 +220,10 @@
                                     data-responsive_offset="on" 
                                     data-elementdelay="0.05" 
                                     style="z-index: 5; white-space: nowrap;text-shadow:0 3px 8px rgba(0,0,0, 0.35);">for everybody
-                                </div>
+                                </div> -->
 
                                 <!-- LAYER NR. 3 -->
-                                <div class="tp-caption tp-resizeme rs-parallaxlevel-0" 
+                              <!--   <div class="tp-caption tp-resizeme rs-parallaxlevel-0" 
                                     id="slide-2-layer-3" 
                                     data-x="['center','center','center','center']" data-hoffset="['0','0','0','0']" 
                                     data-y="['middle','middle','middle','middle']" data-voffset="['20','10','10','0']" 
@@ -244,10 +244,10 @@
                                     data-splitout="none" 
                                     data-responsive_offset="on"
                                     style="z-index: 6; white-space: nowrap;">Easy to customize and use
-                                </div>
+                                </div> -->
 
                                 <!-- LAYER NR. 4 -->
-                                <a class="tp-caption btn btn-white min-width tp-resizeme rs-parallaxlevel-0" 
+                               <!--  <a class="tp-caption btn btn-white min-width tp-resizeme rs-parallaxlevel-0" 
                                     id="slide-2-layer-4" 
                                     data-x="['center','center','center','center']" data-hoffset="['-110','-100','-90','-80']" 
                                     data-y="['middle','middle','middle','middle']" data-voffset="['106','86','80','60']" 
@@ -266,9 +266,9 @@
                                     style="z-index: 6; white-space: nowrap;"
                                     href="#">See Pricing
                                 </a>
-
+ -->
                                  <!-- LAYER NR. 5 -->
-                                <a class="tp-caption btn btn-custom min-width tp-resizeme rs-parallaxlevel-0" 
+                             <!--    <a class="tp-caption btn btn-custom min-width tp-resizeme rs-parallaxlevel-0" 
                                     id="slide-2-layer-5" 
                                     data-x="['center','center','center','center']" data-hoffset="['110','100','90','80']" 
                                     data-y="['middle','middle','middle','middle']" data-voffset="['106','86','80','60']" 
@@ -286,71 +286,65 @@
                                     data-responsive_offset="on" 
                                     style="z-index: 6; white-space: nowrap;"
                                     href="#">Purchase Now
-                                </a>
+                                </a> -->
                             </li>
                         </ul>
-                        <div class="tp-bannertimer" style="height: 5px; background-color: rgba(255, 255, 255, 0.5);"></div>
+                        <!-- <div class="tp-bannertimer" style="height: 5px; background-color: rgba(255, 255, 255, 0.5);"></div> -->
                     </div><!-- End #rev_slider -->
                 </div><!-- END REVOLUTION SLIDER -->
 
                 <div class="container-fluid">
                     <div class="row">
                         <div class="col-md-3 col-sm-6">
-                            <div class="service" >
-						<a href="eventpage1.do">
-					
-							<img src="resources/assets/images/icon1.png" style="width: 25%;" />
-							<!-- </div>End .service-icon -->
-							<h3 class="service-title">
-								신규가입혜택
-							</h3>
-							<p class="cfon">신규로 가입하는 회원분들만 받을 수 있는 특별한 혜택!</p>
-							</a>							
-						</div>
+                            <div class="service">
+                               <a href="eventpage1.do">
+
+       <img src="resources/assets/images/icon1.png" style="width: 25%;" />
+       <!-- </div>End .service-icon -->
+       <h3 class="service-title">
+        신규가입혜택
+       </h3>
+       <p class="cfon">신규로 가입하는 회원분들만 받을 수 있는 특별한 혜택!</p>
+       </a>      
+                            </div><!-- End .service -->
                         </div><!-- End .col-md-3 -->
 
                         <div class="col-md-3 col-sm-6">
                             <div class="service">
-						<a href="eventpage2.do">
-							<!-- <div class="service-icon custom wow rotateIn" data-wow-delay="0.15s"> -->
-							<img src="resources/assets/images/icon3.png" style="width: 25%;" />
-							<!--</div> End .service-icon -->
-							<h3 class="service-title">
-								적립금혜택
-							</h3>
-							<p class="cfon">구매할수록 쌓이는 적립금으로 과자를 무료로 구매!</p>
-							</a>
-						</div>
+                            <a href="eventpage2.do">
+                                <!-- <div class="service-icon custom wow rotateIn" data-wow-delay="0.15s"> -->
+                                    <img src="resources/assets/images/icon3.png" style="width:25%;"/>
+                                <!--</div> End .service-icon -->
+                                <h3 class="service-title"><a href="#">적립금혜택</a></h3>
+                                <p>구매할수록 쌓이는 적립금으로 과자를 무료로 구매!</p>
+                               </a>
+                            </div><!-- End .service -->
                         </div><!-- End .col-md-3 -->
 
                         <div class="clearfix visible-sm"></div><!-- End .clearfix -->
 
                         <div class="col-md-3 col-sm-6">
-                          <div class="service">
-							<!-- <div class="service-icon custom wow rotateIn" data-wow-delay="0.3s"> -->
-							<a href="eventpage3.do">
-							<img src="resources/assets/images/icon4.png" style="width: 25%;" />
-							<!--</div> End .service-icon -->
-							<h3 class="service-title">
-								배송비무료
-							</h3>
-							<p class="cfon">30,000원 이상 구매시 배송비 무료</p>
-							</a>
-						</div>
+                            <div class="service">
+                            <a href="eventpage3.do">
+                                <!-- <div class="service-icon custom wow rotateIn" data-wow-delay="0.3s"> -->
+                                   <img src="resources/assets/images/icon4.png" style="width:25%;"/>
+                                <!--</div> End .service-icon -->
+                                <h3 class="service-title"><a href="#">배송비무료</a></h3>
+                                <p>30,000원 이상 구매시 배송비 무료</p>
+                                </a>
+                            </div><!-- End .service -->
                         </div><!-- End .col-md-3 -->
 
                         <div class="col-md-3 col-sm-6">
-                          <div class="service">
-							<!-- <div class="service-icon custom wow rotateIn" data-wow-delay="0.45s"> -->
-							<a href="eventpage4.do">
-							<img src="resources/assets/images/icon2.png" style="width: 25%;" />
-							<!--</div> End .service-icon -->
-							<h3 class="service-title">
-								리뷰이벤트
-							</h3>
-							<p class="cfon">상품 후기를 남겨주신 분께는 추가 적립금 지급~</p>
-							</a>
-						</div>
+                            <div class="service">
+                            <a href="eventpage4.do">
+                                <!-- <div class="service-icon custom wow rotateIn" data-wow-delay="0.45s"> -->
+                                    <img src="resources/assets/images/icon2.png" style="width:25%;"/>
+                                <!--</div> End .service-icon -->
+                                <h3 class="service-title"><a href="#">리뷰이벤트</a></h3>
+                                <p>상품 후기를 남겨주신 분께는 추가 적립금 지급~</p>
+                                </a>
+                            </div><!-- End .service -->
                         </div><!-- End .col-md-3 -->
                     </div><!-- End .row -->
                 </div><!-- End .container-fluid -->
@@ -380,11 +374,15 @@
                                 <figure>
                                     <img src="resources/assets/images/cookie1.png" alt="Portfolio Name">
                                     <figcaption>
-                                        <a href="resources/assets/images/portfolio/grid/item1.jpg" data-thumb="resources/assets/images/portfolio/grid/item1.jpg" class="zoom-btn"><i class="fa fa-search"></i></a>
-                                    </figcaption>
+         <a href="resources/assets/images/portfolio/grid/오예스.png"
+          data-thumb="resources/assets/images/portfolio/grid/오예스.png"
+          class="zoom-btn"><i class="fa fa-search"></i></a>
+        </figcaption>
                                 </figure>
-                                <div class="portfolio-meta">
-                                    <h3 class="portfolio-title"><a href="#" title="Portfolio name">촉촉하고 부드러운 리얼케이크</a></h3>
+                              <div class="portfolio-meta">
+        <h3 class="portfolio-title">
+         <a href="#" title="Portfolio name">촉촉하고 부드러운 리얼케이크</a>
+        </h3>
                                     <div class="portfolio-tags">
                                         <a href="#">오예스</a>
                                     </div><!-- End .portfolio-tags -->
@@ -393,11 +391,15 @@
 
                             <div class="portfolio-item web-design marketing">
                                 <figure>
-                                    <img src="resources/assets/images/cookie2.png" alt="Portfolio Name">
-                                     <figcaption>
-                                        <a href="http://www.youtube.com/watch?v=jt8YicG-F6c" data-thumb="resources/assets/images/portfolio/grid/item2.jpg" class="zoom-btn"><i class="fa fa-search"></i></a>
-                                    </figcaption>
-                                </figure>
+        <img src="resources/assets/images/portfolio/grid/후렌치파이.png"
+         alt="Portfolio Name">
+        <figcaption>
+         <a href="resources/assets/images/portfolio/grid/후렌치파이.png"
+          data-thumb="resources/assets/images/portfolio/grid/후렌치파이.png"
+          class="zoom-btn"><i class="fa fa-search"></i></a>
+         <!--   <a href="http://www.youtube.com/watch?v=jt8YicG-F6c" data-thumb="assets/images/portfolio/grid/item2.jpg" class="zoom-btn"><i class="fa fa-search"></i></a> 동영상 -->
+        </figcaption>
+       </figure>
                                 <div class="portfolio-meta">
                                     <h3 class="portfolio-title"><a href="#" title="Portfolio name">저온숙성으로 더욱더 부드럽게 즐기세요</a></h3>
                                     <div class="portfolio-tags">
@@ -409,96 +411,123 @@
 
                             <div class="portfolio-item wordpress">
                                 <figure>
-                                    <img src="resources/assets/images/portfolio/grid/item3.jpg" alt="Portfolio Name">
-                                    <figcaption>
-                                        <a href="resources/assets/images/portfolio/grid/item3.jpg" data-thumb="resources/assets/images/portfolio/grid/item3.jpg" class="zoom-btn"><i class="fa fa-search"></i></a>
-                                    </figcaption>
-                                </figure>
+        <img src="resources/assets/images/portfolio/grid/자가비.png"
+         alt="Portfolio Name">
+        <figcaption>
+         <a href="resources/assets/images/portfolio/grid/자가비.png"
+          data-thumb="resources/assets/images/portfolio/grid/자가비.png"
+          class="zoom-btn"><i class="fa fa-search"></i></a>
+        </figcaption>
+       </figure>
                                 <div class="portfolio-meta">
-                                    <h3 class="portfolio-title"><a href="#" title="Portfolio name">Lorem ipsum dolor sit amet, consec tetur adipis</a></h3>
+                                    <h3 class="portfolio-title">
+         <a href="#" title="Portfolio name">겉은 바삭! 속은 부드러운 감자의 맛을
+          그대로 살린 자가비</a>
+        </h3>
                                     <div class="portfolio-tags">
-                                        <a href="#">Design</a>,
-                                        <a href="#">Develop</a>
+         <a href="#">자가비</a>
+                                       
                                     </div><!-- End .portfolio-tags -->
                                 </div><!-- End .portfolio-meta -->
                             </div><!-- End .portfolio-item -->
 
                             <div class="portfolio-item web-design wordpress">
-                                <figure>
-                                    <img src="resources/assets/images/portfolio/grid/item4.jpg" alt="Portfolio Name">
-                                    <figcaption>
-                                        <a href="resources/assets/images/portfolio/grid/item4.jpg" data-thumb="resources/assets/images/portfolio/grid/item4.jpg" class="zoom-btn"><i class="fa fa-search"></i></a>
-                                    </figcaption>
-                                </figure>
+                               <figure>
+        <img src="resources/assets/images/portfolio/grid/칼로리바란스.png"
+         alt="Portfolio Name">
+        <figcaption>
+         <a href="resources/assets/images/portfolio/grid/칼로리바란스.png"
+          data-thumb="resources/assets/images/portfolio/grid/칼로리바란스.png"
+          class="zoom-btn"><i class="fa fa-search"></i></a>
+        </figcaption>
+       </figure>
                                 <div class="portfolio-meta">
-                                    <h3 class="portfolio-title"><a href="#" title="Portfolio name">Lorem ipsum dolor sit amet, consec tetur adipis</a></h3>
-                                    <div class="portfolio-tags">
-                                        <a href="#">Design</a>,
-                                        <a href="#">Develop</a>
+                                    <h3 class="portfolio-title">
+         <a href="#" title="Portfolio name">당신을 위한 맞춤 영양 밸런스!</a>
+        </h3>
+        <div class="portfolio-tags">
+         <a href="#">칼로리바란스</a>
                                     </div><!-- End .portfolio-tags -->
                                 </div><!-- End .portfolio-meta -->
                             </div><!-- End .portfolio-item -->
 
                             <div class="portfolio-item logo-design video marketing">
                                 <figure>
-                                    <img src="resources/assets/images/portfolio/grid/item5.jpg" alt="Portfolio Name">
-                                    <figcaption>
-                                        <a href="resources/assets/images/portfolio/grid/item5.jpg" data-thumb="resources/assets/images/portfolio/grid/item5.jpg" class="zoom-btn"><i class="fa fa-search"></i></a>
-                                    </figcaption>
-                                </figure>
-                                <div class="portfolio-meta">
-                                    <h3 class="portfolio-title"><a href="#" title="Portfolio name">Lorem ipsum dolor sit amet, consec tetur adipis</a></h3>
-                                    <div class="portfolio-tags">
-                                        <a href="#">Design</a>,
-                                        <a href="#">Develop</a>
+        <img src="resources/assets/images/portfolio/grid/뽀로로와친구들.png"
+         alt="Portfolio Name">
+        <figcaption>
+         <a href="resources/assets/images/portfolio/grid/뽀로로와친구들.png"
+          data-thumb="resources/assets/images/portfolio/grid/뽀로로와친구들.png"
+          class="zoom-btn"><i class="fa fa-search"></i></a>
+        </figcaption>
+       </figure>
+       <div class="portfolio-meta">
+        <h3 class="portfolio-title">
+         <a href="#" title="Portfolio name">아이들을 위한 믿을 수 있는 영양간식</a>
+        </h3>
+        <div class="portfolio-tags">
+         <a href="#">뽀로로와친구들</a>
                                     </div><!-- End .portfolio-tags -->
                                 </div><!-- End .portfolio-meta -->
                             </div><!-- End .portfolio-item -->
 
                             <div class="portfolio-item logo-design wordpress">
                                 <figure>
-                                    <img src="resources/assets/images/portfolio/grid/item6.jpg" alt="Portfolio Name">
-                                    <figcaption>
-                                        <a href="resources/assets/images/portfolio/grid/item6.jpg" data-thumb="resources/assets/images/portfolio/grid/item6.jpg" class="zoom-btn"><i class="fa fa-search"></i></a>
-                                    </figcaption>
-                                </figure>
+        <img src="resources/assets/images/portfolio/grid/초코파이.png"
+         alt="Portfolio Name">
+        <figcaption>
+         <a href="resources/assets/images/portfolio/grid/초코파이.png"
+          data-thumb="resources/assets/images/portfolio/grid/초코파이.png"
+          class="zoom-btn"><i class="fa fa-search"></i></a>
+        </figcaption>
+       </figure>
                                 <div class="portfolio-meta">
-                                    <h3 class="portfolio-title"><a href="#" title="Portfolio name">Lorem ipsum dolor sit amet, consec tetur adipis</a></h3>
-                                    <div class="portfolio-tags">
-                                        <a href="#">Design</a>,
-                                        <a href="#">Develop</a>
+                                   <h3 class="portfolio-title">
+         <a href="#" title="초코파이">새로운 시작, 오리온 초코파이情</a>
+        </h3>
+        <div class="portfolio-tags">
+         <a href="#">오리온 초코파이情</a>
+
                                     </div><!-- End .portfolio-tags -->
                                 </div><!-- End .portfolio-meta -->
                             </div><!-- End .portfolio-item -->
 
                             <div class="portfolio-item video marketing">
                                 <figure>
-                                    <img src="resources/assets/images/portfolio/grid/item7.jpg" alt="Portfolio Name">
-                                    <figcaption>
-                                        <a href="resources/assets/images/portfolio/grid/item7.jpg" data-thumb="resources/assets/images/portfolio/grid/item7.jpg" class="zoom-btn"><i class="fa fa-search"></i></a>
-                                    </figcaption>
-                                </figure>
-                                <div class="portfolio-meta">
-                                    <h3 class="portfolio-title"><a href="#" title="Portfolio name">Lorem ipsum dolor sit amet, consec tetur adipis</a></h3>
-                                    <div class="portfolio-tags">
-                                        <a href="#">Design</a>,
-                                        <a href="#">Develop</a>
+        <img src="resources/assets/images/portfolio/grid/바나나초코파이.png"
+         alt="Portfolio Name">
+        <figcaption>
+         <a href="resources/assets/images/portfolio/grid/바나나초코파이.png"
+          data-thumb="resources/assets/images/portfolio/grid/바나나초코파이.png"
+          class="zoom-btn"><i class="fa fa-search"></i></a>
+        </figcaption>
+       </figure>
+       <div class="portfolio-meta">
+        <h3 class="portfolio-title">
+         <a href="#" title="Portfolio name">초코파이와 바나나의 부드러운 만남</a>
+        </h3>
+        <div class="portfolio-tags">
+         <a href="#">초코파이情 바나나</a>
                                     </div><!-- End .portfolio-tags -->
                                 </div><!-- End .portfolio-meta -->
                             </div><!-- End .portfolio-item -->
 
                             <div class="portfolio-item wordpress">
                                 <figure>
-                                    <img src="resources/assets/images/portfolio/grid/item8.jpg" alt="Portfolio Name">
-                                    <figcaption>
-                                        <a href="resources/assets/images/portfolio/grid/item8.jpg" data-thumb="resources/assets/images/portfolio/grid/item8.jpg" class="zoom-btn"><i class="fa fa-search"></i></a>
-                                    </figcaption>
-                                </figure>
-                                <div class="portfolio-meta">
-                                    <h3 class="portfolio-title"><a href="#" title="Portfolio name">Lorem ipsum dolor sit amet, consec tetur adipis</a></h3>
-                                    <div class="portfolio-tags">
-                                        <a href="#">Design</a>,
-                                        <a href="#">Develop</a>
+        <img src="resources/assets/images/portfolio/grid/카스타드.png"
+         alt="Portfolio Name">
+        <figcaption>
+         <a href="resources/assets/images/portfolio/grid/카스타드.png"
+          data-thumb="resources/assets/images/portfolio/grid/카스타드.png"
+          class="zoom-btn"><i class="fa fa-search"></i></a>
+        </figcaption>
+       </figure>
+       <div class="portfolio-meta">
+        <h3 class="portfolio-title">
+         <a href="#" title="카스타드">촉촉해서 더 맛있는 오리온 카스타드</a>
+        </h3>
+        <div class="portfolio-tags">
+         <a href="#">카스타드</a>
                                     </div><!-- End .portfolio-tags -->
                                 </div><!-- End .portfolio-meta -->
                             </div><!-- End .portfolio-item -->
@@ -507,7 +536,7 @@
                 </div><!-- End .container-fluid -->
 
                 <div class="mb15 mb5-sm"></div><!-- margin -->
-				<div class="container-fluid">
+    <div class="container-fluid">
                     <h2 class="title-border custom text-center mb45"><span>이번주 베스트 리뷰</span></h2>
                 
                     <div class="swiper-container testimonials-box-carousel-fullnav">
@@ -977,20 +1006,20 @@
         </script>
         
         <script type="text/javascript">
-		$(document).ready(function() {
-			$(".gnb").hover(function() {
-				$(".snb").stop().slideDown(400);
-			}, function() {
-				$(".snb").stop().slideUp(600);
-			});
+  $(document).ready(function() {
+   $(".gnb").hover(function() {
+    $(".snb").stop().slideDown(400);
+   }, function() {
+    $(".snb").stop().slideUp(600);
+   });
 
-			$(".snb").hover(function() {
-				$(".snb").stop().slideDown(400);
-			}, function() {
-				$(".snb").stop().slideUp(600);
-			});
-		});
-	</script>
+   $(".snb").hover(function() {
+    $(".snb").stop().slideDown(400);
+   }, function() {
+    $(".snb").stop().slideUp(600);
+   });
+  });
+ </script>
         
 
     
